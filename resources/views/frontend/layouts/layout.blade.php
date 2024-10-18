@@ -255,7 +255,7 @@
                             <div class="inner">
                                 <div class="content text-left">
                                     <div class="logo">
-                                        <a href="index.html">
+                                        <a href="{{'/'}}">
                                             <img class="logo-light" src="{{ asset('frontend/assets/images/logo/aris-white.png')}}" alt="Corporate Logo">
                                             <img class="logo-dark" src="{{ asset('frontend/assets/images/logo/aris-logo.png')}}" alt="Corporate Logo">
                                         </a>
