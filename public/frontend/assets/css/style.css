@@ -3,77 +3,6 @@
  CSS Index  
 ****************************
 
-/--- Default Styles -----/
-
-01.Variables
-02.Mixins
-03.Reset
-04.Typography
-05.Extend
-06.Animations
-07.Shortcode
-08.Spacing
-09.Common
-10.Forms
-11.Sal
-12.Text Animation
-13.Themebg
-
-/--- Header Styles -----/
-
-01.Headerdefault
-02.Nav
-03.Header Top
-04.HeaderTopBar
-05.Mobilemenu
-
-/--- Elements -----/
-
-01.Breadcrumb
-02.Sectiontitle
-03.Button
-04.Service
-05.Card
-06.Counter
-07.Progressbar
-08.Accordion
-09.Social Share
-10.Team
-11.Portfolio
-12.Testimonial
-13.Slickslide
-14.Timeline
-15.Call to Action
-16.Tab
-17.Pricing
-18.Split
-19.Vedio
-20.Gallery
-21.Contact
-22.Brand
-23.404
-24.Advance Tab
-25.Advancepricing
-26.Contact Form
-27.Swicher
-28.Backto Top
-29.About
-30.Newsletter
-
-/--- Blog -----/
-01.Blog
-02.Sidebar
-03.Blog Details
-
-/--- Footer -----/
-01.Footer
-02.Copyright
-
-/--- Template -----/
-01.Banner
-02.Portfoliodetails
-03.Splash
-04.Lightmode
 
 ***************************************/
 /**************************************
@@ -823,6 +752,10 @@ var {
 /*---------------------------
 	List Style 
 ---------------------------*/
+.pdf-download img {
+  margin-left: 8px;
+}
+
 ul,
 ol {
   padding-left: 18px;
@@ -859,7 +792,7 @@ ul.liststyle.bullet li + li {
   margin-top: 8px;
 }
 ul li {
-  font-size: var(--font-size-b1);
+  font-size: var(--font-size-b3);
   line-height: var(--line-height-b1);
   margin-top: 10px;
   margin-bottom: 10px;
@@ -7884,9 +7817,29 @@ textarea:-ms-input-placeholder {
     font-size: 16px;
   }
 }
+
+
+
+.split-inner .list-icon {
+  overflow-y: scroll;
+  height: 350px;
+}
+
+.split-inner .list-icon::-webkit-scrollbar {
+  width: 5px;
+  height: 8px;
+  background-color: #030303; /* or add it to the track */
+}
+
+/* Add a thumb */
+.split-inner .list-icon::-webkit-scrollbar-thumb {
+  background: #6d6d6d;
+  border-radius: 50px;
+}
+
 .list-icon li .icon {
   width: 30px;
-  background-color: var(--color-blackest);
+  background-color: #1a1a1a;
   height: 30px;
   border-radius: 100%;
   display: inline-block;
@@ -7905,6 +7858,7 @@ textarea:-ms-input-placeholder {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  font-size: 20px;
 }
 
 .rainbow-sub-badge {
@@ -8979,7 +8933,7 @@ xclip
   align-items: center;
 }
 .header-default .logo a img {
-  max-height: 45px;
+  max-height: 75px;
 }
 .header-default .header-right {
   display: flex;
@@ -10184,7 +10138,7 @@ div.btn-default.rounded-player.sm-size {
   border: 1px solid var(--color-border);
 }
 .service.service__style--1.text-left, .service.service__style--1.text-start {
-  padding: 50px;
+  padding: 40px;
 }
 @media only screen and (min-width: 1200px) and (max-width: 1599px) {
   .service.service__style--1.text-left, .service.service__style--1.text-start {
@@ -11765,6 +11719,7 @@ Timeline Area
 }
 .single-timeline .single-content .inner .content .title {
   margin-bottom: 0;
+  font-size: 28px;
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .single-timeline .single-content .inner .content .title {
@@ -14111,7 +14066,7 @@ iframe {
     Footer Style Here  
 ------------------------*/
 .logo a img {
-  max-height: 55px;
+  max-height: 75px;
 }
 
 .footer-style-1 {
@@ -15781,20 +15736,20 @@ body.active-light-mode .rainbow-back-top,
 body.active-light-mode .popup-mobile-menu .inner,
 body.active-light-mode .rainbow-call-to-action.style-8,
 body.active-light-mode .bg-overlay-solid::before {
-  background: #f5f8fa;
+  background: #ffffff;
 }
 
 body.active-light-mode .rainbow-header.sticky {
-  background: #f5f8fa !important;
+  background: #ffffff !important;
 }
 
 body.active-light-mode .bg-color-blackest {
-  background: #f5f8fa !important;
+  background: #f9f9f9 !important;
 }
 
 body.active-light-mode .footer-style-default,
 body.active-light-mode .copyright-style-one {
-  background: #f5f8fa;
+  background: #ffffff;
 }
 
 body.active-light-mode .slider-style-2 .list-icon li .icon {
