@@ -36,14 +36,14 @@
                             <nav class="mainmenu-nav d-none d-lg-block">
 
                                 <ul class="mainmenu">
-                                    <li><a href="#">Home</a></li>
+                                    <li><a href="{{'/'}}">Home</a></li>
                                     <li class="has-droupdown has-menu-child-item"><a href="{{url ('/about')}}">About Us</a>
                                         <ul class="submenu">
                                             <li><a href="portfolio.html">Aris Team</a></li>
                                             <li><a href="portfolio-three-column.html">Board</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="#">Services</a></li>
+                                    <li><a href="{{url ('/services')}}">Services</a></li>
                                     <li><a href="#">Media & News</a></li>
                                     <li><a href="#">Careers</a></li>
                                     <li><a href="#">Locations</a></li>
@@ -280,55 +280,55 @@
                         <div class="col-lg-2 col-md-6 col-sm-6 col-12">
                             <div class="rainbow-footer-widget">
                                 <h4 class="title">Services</h4>
-                                <div class="inner">
+                                {{--<div class="inner">
                                     <ul class="footer-link link-hover">
                                         <li><a href="about.html">About</a></li>
                                         <li><a href="portfolio.html">Portfolio</a></li>
                                         <li><a href="contact.html">Contact</a></li>
                                         <li><a href="service.html">Service</a></li>
                                     </ul>
-                                </div>
+                                </div>--}}
                             </div>
                         </div>
                         <div class="col-lg-2 col-md-6 col-sm-6 col-12">
                             <div class="rainbow-footer-widget">
                                 <div class="widget-menu-top">
                                     <h4 class="title">Solutions</h4>
-                                    <div class="inner">
+                                    {{--<div class="inner">
                                         <ul class="footer-link link-hover">
                                             <li><a href="brand.html">Brand</a></li>
                                             <li><a href="call-to-action.html">call To Action</a></li>
                                             <li><a href="counter.html">Counter</a></li>
                                             <li><a href="service.html">Service</a></li>
                                         </ul>
-                                    </div>
+                                    </div>--}}
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-2 col-md-6 col-sm-6 col-12">
                             <div class="rainbow-footer-widget">
                                 <h4 class="title">Company</h4>
-                                <div class="inner">
+                                {{--<div class="inner">
                                     <ul class="footer-link link-hover">
                                         <li><a href="pricing.html">Pricing</a></li>
                                         <li><a href="tab.html">Tab Styles</a></li>
                                         <li><a href="service.html">Service</a></li>
                                         <li><a href="social-share.html">Social</a></li>
                                     </ul>
-                                </div>
+                                </div>--}}
                             </div>
                         </div>
                         <div class="col-lg-2 col-md-6 col-sm-6 col-12">
                             <div class="rainbow-footer-widget">
                                 <h4 class="title">Resources</h4>
-                                <div class="inner">
+                                {{--<div class="inner">
                                     <ul class="footer-link link-hover">
                                         <li><a href="team.html">Team</a></li>
                                         <li><a href="testimonial.html">Testimonial</a></li>
                                         <li><a href="service.html">Service</a></li>
                                         <li><a href="timeline.html">Timeline</a></li>
                                     </ul>
-                                </div>
+                                </div>--}}
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6 col-sm-6 col-12">

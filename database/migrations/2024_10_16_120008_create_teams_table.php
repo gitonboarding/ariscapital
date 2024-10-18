@@ -14,9 +14,9 @@ return new class extends Migration
         Schema::create('teams', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('age');
-            $table->string('designation');
-            $table->string('image');
+            $table->string('position');
+            $table->text('description')->nullable();
+            $table->string('image')->nullable(); // To store the image path
             $table->timestamps();
         });
     }

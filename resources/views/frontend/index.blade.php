@@ -19,7 +19,7 @@
 <!-- End Slider Area  -->
 
 <!-- Start Call To Action  -->
-<div class="rainbow-callto-action clltoaction-style-default style-6" data-sal="slide-up" data-sal-duration="700">
+{{--<div class="rainbow-callto-action clltoaction-style-default style-6" data-sal="slide-up" data-sal-duration="700">
     <div class="container">
         <div class="row row--0 align-items-center content-wrapper">
             <div class="col-lg-8 col-12">
@@ -35,13 +35,13 @@
         </div>
     </div>
 </div>
-<!-- End Call To Action  -->
+<!-- End Call To Action  -->    
 <!-- Start Seperator Area  -->
 <div class="rbt-separator-mid">
     <div class="container">
         <hr class="rbt-separator m-0">
     </div>
-</div>
+</div>--}}
 <!-- End Seperator Area  -->
 
 
@@ -181,7 +181,7 @@
             </div>
             <div class="col-lg-4 col-md-6 col-sm-6 col-12" data-sal="slide-up" data-sal-duration="700" data-sal-delay="300">
                 <div class="call-to-btn text-left mt_sm--20 text-lg-right">
-                    <a class="btn-default" href="https://themeforest.net/checkout/from_item/34133466?license=regular">Purchase Doob
+                    <a class="btn-default" href="{{url ('/services')}}">Know more
                         <i class="feather-arrow-right"></i>
                     </a>
                 </div>
@@ -246,7 +246,7 @@
                         </ul>--}}
 
                         <div class="read-more-btn mt--40">
-                            <a class="btn-default btn-icon" target="_blank" href="#">More About Us <i class="icon feather-arrow-right"></i></a>
+                            <a class="btn-default btn-icon" target="_blank" href="{{url ('/about')}}">More About Us <i class="icon feather-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
