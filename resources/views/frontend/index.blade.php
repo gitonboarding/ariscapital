@@ -179,7 +179,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6 col-sm-6 col-12" data-sal="slide-up" data-sal-duration="700" data-sal-delay="300">
+            <div class="col-lg-4 col-md-6 col-sm-6 col-12 justify-btn" data-sal="slide-up" data-sal-duration="700" data-sal-delay="300">
                 <div class="call-to-btn text-left mt_sm--20 text-lg-right">
                     <a class="btn-default" href="{{url ('/services')}}">Know more
                         <i class="feather-arrow-right"></i>
@@ -495,14 +495,14 @@
             <div class="col-lg-4 col-md-6 col-sm-12 col-12 mt--30">
                 <div class="rainbow-card box-card-style-default">
                     <div class="inner">
-                        <div class="thumbnail"><a class="image" href="blog-details.html"><img src="{{ asset('frontend/assets/images/blog/blog-01.jpg')}}" alt="Blog Image"></a></div>
+                        <div class="thumbnail"><a class="image" href="#"><img src="{{ asset('frontend/assets/images/blog/blog-01.jpg')}}" alt="Blog Image"></a></div>
                         <div class="content">
                             <ul class="rainbow-meta-list">
                                 <li><a href="#">Irin Pervin</a></li>
                                 <li class="separator">/</li>
                                 <li>10 Dec 2021</li>
                             </ul>
-                            <h4 class="title"><a href="blog-details.html">Best Corporate Tips You Will Read This
+                            <h4 class="title"><a href="#">Best Corporate Tips You Will Read This
                                     Year.</a></h4>
                         </div>
                     </div>
@@ -512,14 +512,14 @@
             <div class="col-lg-4 col-md-6 col-sm-12 col-12 mt--30">
                 <div class="rainbow-card box-card-style-default">
                     <div class="inner">
-                        <div class="thumbnail"><a class="image" href="blog-details.html"><img src="{{ asset('frontend/assets/images/blog/blog-02.jpg')}}" alt="Blog Image"></a></div>
+                        <div class="thumbnail"><a class="image" href="#"><img src="{{ asset('frontend/assets/images/blog/blog-02.jpg')}}" alt="Blog Image"></a></div>
                         <div class="content">
                             <ul class="rainbow-meta-list">
                                 <li><a href="#">Fatima Asrafy</a></li>
                                 <li class="separator">/</li>
                                 <li>30 Nov 2021</li>
                             </ul>
-                            <h4 class="title"><a href="blog-details.html">Should Fixing Corporate Take 100
+                            <h4 class="title"><a href="#">Should Fixing Corporate Take 100
                                     Steps.</a></h4>
                         </div>
                     </div>
@@ -530,7 +530,7 @@
                 <div class="rainbow-card box-card-style-default">
                     <div class="inner">
                         <div class="thumbnail">
-                            <a class="image" href="blog-details.html"><img src="{{ asset('frontend/assets/images/blog/blog-03.jpg')}}" alt="Blog Image"></a>
+                            <a class="image" href="#"><img src="{{ asset('frontend/assets/images/blog/blog-03.jpg')}}" alt="Blog Image"></a>
                         </div>
                         <div class="content">
                             <ul class="rainbow-meta-list">
@@ -538,7 +538,7 @@
                                 <li class="separator">/</li>
                                 <li>12 Oct 2021</li>
                             </ul>
-                            <h4 class="title"><a href="blog-details.html">The Next 100 Things To Immed Iately Do
+                            <h4 class="title"><a href="#">The Next 100 Things To Immed Iately Do
                                     About.</a></h4>
                         </div>
                     </div>

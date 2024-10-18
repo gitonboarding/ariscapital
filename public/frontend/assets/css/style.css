@@ -7819,6 +7819,13 @@ textarea:-ms-input-placeholder {
 }
 
 
+.justify-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
 
 .split-inner .list-icon {
   overflow-y: scroll;
