@@ -39,6 +39,17 @@ class BoardController extends Controller
         return view('backend.board.edit', compact('data'));
     }
 
+    public function update(Request $request, $id) {
+        $data = Board::find($id);
+        $data->name = $request->name;
+        $data->position = $request->position;
+        $data->description = $request->description;
+        $data->image = $request->image;
+        $data->save();
+        return redirect()->route('board.index');
+    }
+
+
     public function delete($id) {
         $data = Board::find($id);
         $data->delete();

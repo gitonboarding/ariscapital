@@ -53,6 +53,11 @@ Route::get('/board/delete/{id}', [BoardController::class, 'delete'])->name('boar
 
 // Route for Blog
 Route::get('/blog', [BlogController::class, 'index'])->name('blog.index');
+Route::get('/blog/create', [BlogController::class, 'create'])->name('blog.create');
+Route::post('/blog/save', [BlogController::class, 'save'])->name('blog.save');
+Route::get('/blog/edit/{id}', [BlogController::class, 'edit'])->name('blog.edit');
+Route::post('/blog/update/{id}', [BlogController::class, 'update'])->name('blog.update');
+Route::get('/blog/delete/{id}', [BlogController::class, 'delete'])->name('blog.delete');
 
 
 

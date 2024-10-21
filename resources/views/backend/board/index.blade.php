@@ -14,10 +14,10 @@ Board
                 <!-- Recent Sales -->
                 <div class="col-12">
                     <div class="card">
-                        <div class="card-body">
+                        <div class="card-body position-relative">
                             <h5 class="card-title">Board Of Directors</h5>
-
-                            <a href="{{route('board.create')}}" type="button" class="btn btn-primary">Create</a>
+                            <a href="{{route('board.create')}}" type="button" class="btn btn-primary position-absolute top-0 end-0 mt-3">Create Member</a>
+                            <hr>
 
                             <!-- Table with hoverable rows -->
                             <table class="table table-hover">

@@ -14,10 +14,11 @@ Teams
                     <!-- Recent Sales -->
                     <div class="col-12">
                         <div class="card">
-                            <div class="card-body">
+                            <div class="card-body position-relative">
                                 <h5 class="card-title">Team members</h5>
 
-                                <a href="{{route('team.create')}}" type="button" class="btn btn-primary">Create</a>
+                                <a href="{{route('team.create')}}" type="button" class="btn btn-primary position-absolute top-0 end-0 mt-3">Create Member</a>
+                                <hr>
 
                                 <!-- Table with hoverable rows -->
                                 <table class="table table-hover">
@@ -32,7 +33,7 @@ Teams
                                         </tr>
                                     </thead>
                                     <?php
-                                    $count=0;
+                                    $count=1;
                                     ?>
                                     <tbody>
                                         @foreach($data as $row)

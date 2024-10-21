@@ -30,6 +30,7 @@
     <link href="{{ asset('backend/assets/css/style.css') }}" rel="stylesheet">
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet" />
+    <script src="https://cdn.ckeditor.com/ckeditor5/23.0.0/classic/ckeditor.js"></script>
 </head>
 
 
@@ -142,14 +143,20 @@
             </li><!-- End Dashboard Nav -->
             <li class="nav-item">
                 <a class="nav-link " href="{{route('team.index')}}">
-                    <i class="bi bi-people"></i>
+                    <i class="bi bi-diagram-3"></i>
                     <span>Teams</span>
                 </a>
             </li><!-- End Dashboard Nav -->
             <li class="nav-item">
                 <a class="nav-link " href="{{route('board.index')}}">
-                    <i class="bi bi-grid"></i>
+                    <i class="bi bi-people"></i>
                     <span>Board</span>
+                </a>
+            </li><!-- End Dashboard Nav -->
+            <li class="nav-item">
+                <a class="nav-link " href="{{route('blog.index')}}">
+                    <i class="bi bi-file-earmark-richtext"></i>
+                    <span>Blogs</span>
                 </a>
             </li><!-- End Dashboard Nav -->
         </ul>
