@@ -104,12 +104,8 @@
                     </div>
                 </div>
                 <ul class="mainmenu">
-                    <li class="with-megamenu has-menu-child-item position-relative"><a href="{{url('/')}}">Home</a>
-
-                    </li>
+                    <li><a href="{{url('/')}}">Home</a></li>
                     <li><a href="{{url('/about')}}">About</a></li>
-
-
                     <li><a href="{{url ('/services')}}">Services</a></li>
                     <li><a href="#">Media & News</a></li>
                     <li><a href="#">Careers</a></li>
@@ -117,13 +113,6 @@
                     <li><a href="#">Important Information</a></li>
                     <li><a href="#">Contact Us</a></li>
                 </ul>
-
-
-
-
-
-
-
             </div>
         </div>
 
@@ -135,8 +124,6 @@
         <!-- End Theme Style  -->
 
         @yield('contents')
-
-
 
         <!-- Start Footer Area  -->
         <footer class="rainbow-footer footer-style-default variation-two">

@@ -17,7 +17,7 @@ class TeamController extends Controller
     {
         return view('backend.team.create');
     }
-    public function save(Request $request)
+    public function save(Request $request) 
     {
         // Validate the form input
         $validatedData = $request->validate([

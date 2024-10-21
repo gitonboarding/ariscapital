@@ -1,17 +1,8 @@
 @extends('backend.layouts.index')
-
+@section('title')
+Teams
+@endsection
 @section('contents')
-<main id="main" class="main">
-
-    <div class="pagetitle">
-        <h1>Dashboard</h1>
-        <nav>
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                <li class="breadcrumb-item active">Team</li>
-            </ol>
-        </nav>
-    </div><!-- End Page Title -->
 
     <section class="section dashboard">
         <div class="row">
@@ -26,7 +17,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Team members</h5>
 
-                                <a href="{{route('team.create')}}" type="button" class="btn btn-primary">create</a>
+                                <a href="{{route('team.create')}}" type="button" class="btn btn-primary">Create</a>
 
                                 <!-- Table with hoverable rows -->
                                 <table class="table table-hover">
@@ -46,7 +37,7 @@
                                     <tbody>
                                         @foreach($data as $row)
                                         <tr>
-                                            <th scope="row">{{++$count}}</th>
+                                            <th scope="row">{{$count++}}</th>
                                             <td></td>
                                             <td>{{$row->name}}</td>
                                             <td>{{$row->position}}</td>

@@ -1,18 +1,8 @@
 @extends('backend.layouts.index')
-
+@section('title')
+Teams
+@endsection
 @section('contents')
-<main id="main" class="main">
-
-    <div class="pagetitle">
-        <h1>Team</h1>
-        <nav>
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="{{ url('dashboard') }}">Home</a></li>
-                <li class="breadcrumb-item active">Team</li>
-            </ol>
-        </nav>
-    </div><!-- End Page Title -->
-
     <section class="section">
         <div class="row">
 
@@ -51,7 +41,6 @@
 
                             <div class="text-center">
                                 <button type="submit" class="btn btn-primary">Submit</button>
-                                <button type="reset" class="btn btn-secondary">Reset</button>
                             </div>
                         </form><!-- End Team Form -->
 

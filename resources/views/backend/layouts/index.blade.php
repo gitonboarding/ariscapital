@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Dashboard - NiceAdmin Bootstrap Template</title>
+    <title>Aris Capital - Admin</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
@@ -61,7 +61,7 @@
                     </a>
                 </li><!-- End Search Icon-->
 
-                
+
 
                 <li class="nav-item dropdown pe-3">
 
@@ -125,6 +125,8 @@
             </ul>
         </nav><!-- End Icons Navigation -->
 
+
+
     </header><!-- End Header -->
 
     <!-- ======= Sidebar ======= -->
@@ -133,19 +135,41 @@
         <ul class="sidebar-nav" id="sidebar-nav">
 
             <li class="nav-item">
-                <a class="nav-link " href="{{route('team.index')}}">
+                <a class="nav-link" href="{{url ('/dashboard')}}">
                     <i class="bi bi-grid"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li><!-- End Dashboard Nav -->
+            <li class="nav-item">
+                <a class="nav-link " href="{{route('team.index')}}">
+                    <i class="bi bi-people"></i>
                     <span>Teams</span>
                 </a>
             </li><!-- End Dashboard Nav -->
+            <li class="nav-item">
+                <a class="nav-link " href="{{route('board.index')}}">
+                    <i class="bi bi-grid"></i>
+                    <span>Board</span>
+                </a>
+            </li><!-- End Dashboard Nav -->
         </ul>
-
     </aside><!-- End Sidebar-->
+    
+    <main id="main" class="main">
+        <div class="pagetitle">
+            <h1>@yield('title')</h1>
+            <nav>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item active">@yield('title')</li>
+                </ol>
+            </nav>
+        </div><!-- End Page Title -->
 
-    @yield('contents')
+        @yield('contents')
 
-    <!-- ======= Footer ======= -->
-    <footer id="footer" class="footer">
+        <!-- ======= Footer ======= -->
+        {{--<footer id="footer" class="footer">
         <div class="copyright">
             &copy; Copyright 2024 | <strong><span>Arias Capital</span></strong> | All Rights Reserved
         </div>
@@ -153,38 +177,39 @@
 
             Designed by <a href="https://esytes.com/" target="_blank">eSytes</a>
         </div>
-    </footer><!-- End Footer -->
+    </footer>--}}
+        <!-- End Footer -->
 
-    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+        <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-    <!-- Vendor JS Files -->
-    <script src="{{ asset('backend/assets/vendor/apexcharts/apexcharts.min.js') }}"></script>
-    <script src="{{ asset('backend/assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
-    <script src="{{ asset('backend/assets/vendor/chart.js/chart.umd.js') }}"></script>
-    <script src="{{ asset('backend/assets/vendor/echarts/echarts.min.js') }}"></script>
-    <script src="{{ asset('backend/assets/vendor/quill/quill.js') }}"></script>
-    <script src="{{ asset('backend/assets/vendor/simple-datatables/simple-datatables.js') }}"></script>
-    <script src="{{ asset('backend/assets/vendor/tinymce/tinymce.min.js') }}"></script>
-    <script src="{{ asset('backend/assets/vendor/php-email-form/validate.js') }}"></script>
+        <!-- Vendor JS Files -->
+        <script src="{{ asset('backend/assets/vendor/apexcharts/apexcharts.min.js') }}"></script>
+        <script src="{{ asset('backend/assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+        <script src="{{ asset('backend/assets/vendor/chart.js/chart.umd.js') }}"></script>
+        <script src="{{ asset('backend/assets/vendor/echarts/echarts.min.js') }}"></script>
+        <script src="{{ asset('backend/assets/vendor/quill/quill.js') }}"></script>
+        <script src="{{ asset('backend/assets/vendor/simple-datatables/simple-datatables.js') }}"></script>
+        <script src="{{ asset('backend/assets/vendor/tinymce/tinymce.min.js') }}"></script>
+        <script src="{{ asset('backend/assets/vendor/php-email-form/validate.js') }}"></script>
 
-    <!-- Template Main JS File -->
-    <script src="{{ asset('backend/assets/js/main.js') }}"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
-    @if($errors->any())
-    @foreach($errors->all() as $error)
-    <script>
-        toastr.error('{{ $error }}');
-    </script>
-    @endforeach
-    @endif
+        <!-- Template Main JS File -->
+        <script src="{{ asset('backend/assets/js/main.js') }}"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+        @if($errors->any())
+        @foreach($errors->all() as $error)
+        <script>
+            toastr.error('{{ $error }}');
+        </script>
+        @endforeach
+        @endif
 
-  
 
-    @if(session('success'))
-    <script>
-        toastr.success("{{ session('success')}}");
-    </script>
-    @endif
+
+        @if(session('success'))
+        <script>
+            toastr.success("{{ session('success')}}");
+        </script>
+        @endif
 
 
 
