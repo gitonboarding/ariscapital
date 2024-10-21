@@ -17,7 +17,7 @@ class TeamController extends Controller
     {
         return view('backend.team.create');
     }
-    public function save(Request $request) 
+    public function save(Request $request)
     {
         // Validate the form input
         $validatedData = $request->validate([
@@ -27,25 +27,27 @@ class TeamController extends Controller
             'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
 
+        $data = new Team();
 
         // Handle image upload
         if ($request->hasFile('image')) {
             $imageName = time() . '.' . $request->image->extension(); // Unique image name
             $request->image->move(public_path('images/team'), $imageName); // Store image in public/images/team
-            $validatedData['image'] = 'images/team/' . $imageName; // Save the path in DB
+            $data->image = 'images/team/' . $imageName; // Save the path in DB
         }
 
-        // Create a new team member
-        // Team::create($validatedData);
-        $data = new Team();
-        $data->name = $request->name;
-        $data->position = $request->position;
-        $data->description = $request->description;
+        // Assign validated data to the model
+        $data->name = $validatedData['name'];
+        $data->position = $validatedData['position'];
+        $data->description = $validatedData['description'] ?? null;
+
+        // Save the new team member
         $data->save();
 
         // Redirect or return response
         return redirect()->route('team.index')->with('success', 'Team member created successfully!');
     }
+
 
     public function edit($id)
     {
@@ -77,6 +79,4 @@ class TeamController extends Controller
         $data->delete();
         return redirect()->route('team.index')->with('success', 'Team member deleted successfully!');
     }
-    
-
 }
