@@ -36,6 +36,7 @@ Teams
                             <!-- Image Upload -->
                             <div class="col-12">
                                 <label for="teamImage" class="form-label">Upload Image</label>
+                                <img src="{{asset($data->image)}}" alt = "" width="100px" height="100px"></img>
                                 <input type="file" class="form-control" id="teamImage" name="image" value="" required>
                             </div>
 
