@@ -8,7 +8,7 @@
 
     <title>Aris Capital</title>
     <!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('frontend/assets/images/favicon.png')}}">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('frontend/assets/images/logo/favicon-white.png')}}">
     <!-- CSS ============================================ -->
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/vendor/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{ asset('frontend/assets/css/plugins/animation.css')}}">
@@ -67,7 +67,7 @@
                             <!-- Start Mobile-Menu-Bar -->
 
                             <!-- Start Switcher Area  -->
-                            <div id="my_switcher" class="my_switcher">
+                           {{-- <div id="my_switcher" class="my_switcher">
                                 <ul>
                                     <li>
                                         <a href="javascript: void(0);" data-theme="light" class="setColor light">
@@ -80,7 +80,7 @@
                                         </a>
                                     </li>
                                 </ul>
-                            </div>
+                            </div>--}}
                             <!-- Start Switcher Area  -->
 
                         </div>

@@ -18,13 +18,35 @@ class BlogController extends Controller
         return view('backend.blogs.create');
     }
 
-    public function save(Request $request) {
+    public function save(Request $request)
+    {   
+        // dd($request->all());
+       
+        // Validate the form input
+        // $validatedData = $request->validate([
+        //     'name' => 'required|string|max:255',
+        //     'position' => 'required|string|max:255',
+        //     'description' => 'nullable|string',
+        //     'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        // ]);
+
         $data = new Blog();
+
+        // Handle image upload
+        if ($request->hasFile('image')) {
+            $imageName = $request->file('image');
+            $imageName = time() . '.' . $request->image->extension(); // Unique image name
+            $request->image->move(public_path('images/blog'), $imageName); // Store image in public/images/team
+            $data->image = 'images/blog/' . $imageName; // Save the path in DB
+        }
+
         $data->title = $request->title;
         $data->slug = Str::slug($request->title);
         $data->description = $request->description;
         $data->save();
-        return redirect()->route('blog.index');
+
+        // Redirect or return response
+        return redirect()->route('blog.index')->with('success', 'Blog created successfully!');
     }
     
     public function edit($id){
@@ -34,9 +56,18 @@ class BlogController extends Controller
 
     public function update(Request $request, $id)
     {
-        // dd($id);
+        //  dd($request->all());
 
         $data = Blog::find($id);
+
+        // Handle image upload
+        if ($request->hasFile('image')) {
+            $imageName = $request->file('image');
+            $imageName = time() . '.' . $request->image->extension(); // Unique image name
+            $request->image->move(public_path('images/blog'), $imageName); // Store image in public/images/team
+            $data->image = 'images/blog/' . $imageName; // Save the path in DB
+        }
+        
         $data->title = $request->title;
         $data->slug = Str::slug($request->title);
         $data->description = $request->description;

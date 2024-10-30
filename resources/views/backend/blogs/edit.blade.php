@@ -31,11 +31,13 @@ Blogs
                         <!-- Featured Image -->
                         <div class="col-12">
                             <label for="blogImage" class="form-label">Featured Image</label>
-                            <input type="file" class="form-control" id="blogImage" name="image" value="" required>
+                            <input type="file" id="image" name="image" class="form-control">
+                            <img src="{{asset($data->image)}}" id="image_preview" class="img-fluid rounded mt-2 mb-2" width="100" height="100">
+                            
                         </div>
 
                         <div class="text-center">
-                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <button type="submit" class="btn btn-primary">Submit</button>   
                         </div>
                     </form><!-- End Team Form -->
 
@@ -53,5 +55,19 @@ Blogs
         .catch(error => {
             console.error(error);
         });
+</script>
+<script>
+    const input = document.getElementById("image");
+    const preview = document.getElementById("image_preview");
+    input.addEventListener('change', function() {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function(e) {
+                preview.classList.remove('d-none');
+                preview.setAttribute('src', e.target.result);
+            }
+            reader.readAsDataURL(input.files[0]);
+        }
+    });
 </script>
 @endsection

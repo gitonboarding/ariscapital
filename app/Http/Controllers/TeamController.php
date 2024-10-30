@@ -36,10 +36,9 @@ class TeamController extends Controller
             $data->image = 'images/team/' . $imageName; // Save the path in DB
         }
 
-        // Assign validated data to the model
-        $data->name = $validatedData['name'];
-        $data->position = $validatedData['position'];
-        $data->description = $validatedData['description'] ?? null;
+        $data->name=$request->name;
+        $data->position=$request->position;
+        $data->description=$request->description ?? null;
 
         // Save the new team member
         $data->save();
@@ -52,7 +51,6 @@ class TeamController extends Controller
     public function edit($id)
     {
         // dd($id);
-
         $data = Team::find($id);
         // dd($data);
         return view('backend.team.edit', compact('data'));
@@ -61,13 +59,17 @@ class TeamController extends Controller
     public function update(Request $request, $id)
     {
         // dd($id);
-
         $data = Team::find($id);
+        if ($request->hasFile('image')) {
+            $imageName = time() . '.' . $request->image->extension(); // Unique image name
+            $request->image->move(public_path('images/team'), $imageName); // Store image in public/images/team
+            $data->image = 'images/team/' . $imageName; // Save the path in DB
+        }
+        
         $data->name = $request->name;
         $data->position = $request->position;
         $data->description = $request->description;
         $data->save();
-
         // Redirect or return response
         return redirect()->route('team.index')->with('success', 'Team member created successfully!');
     }
@@ -79,4 +81,6 @@ class TeamController extends Controller
         $data->delete();
         return redirect()->route('team.index')->with('success', 'Team member deleted successfully!');
     }
+
+
 }

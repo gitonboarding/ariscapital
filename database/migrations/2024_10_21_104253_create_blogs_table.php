@@ -17,6 +17,7 @@ return new class extends Migration
             $table->text('description')->nullable();
             $table->string('image')->nullable(); // To store the image path
             $table->string('slug')->nullable();
+            $table->softDeletes();
             $table->timestamps();
         });
     }
