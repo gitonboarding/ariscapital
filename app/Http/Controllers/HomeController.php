@@ -7,11 +7,17 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    public function about(){
-        return view('frontend.about');
+    public function team(){
+        return view('frontend.team');
     }
 
-    public function services(){
-        return view('frontend.services');
+    public function board(){
+        return view('frontend.board');
+    }
+    public function contact(){
+        return view('frontend.contact');
+    }
+    public function important_information(){
+        return view('frontend.important-information');
     }
 }

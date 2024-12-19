@@ -1,326 +1,383 @@
 @extends('frontend.layouts.layout')
 @section('contents')
+<section class="main-section section-desktop" id="home">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3 d-flex align-items-end">
+                <div class="raftar-qr">
+                    <p>https://raftar.loan</p>
+                    <h5>New Customers</h5>
+                    <p><i class="bi bi-telephone-fill"></i> +91 81009 87162 <br>or<br>Scan below</p>
+                    <img src="{{ asset('frontend/assets/images/raftar-qr.png')}}">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="main-logos">
+                    <div class="text-logo">
+                        <img src="{{ asset('frontend/assets/images/aris-capital.png')}}">
+                    </div>
 
+                    <div class="hero-logo">
+                        <a href="{{url('/')}}#about-us">
+                            <img src="{{ asset('frontend/assets/images/Aris.png')}}">
+                        </a>
+                    </div>
 
-<!-- Start Slider Area  -->
-<div class="slider-area slider-bg-image slider-style-5 bg-overlay-solid height-850 bg_image bg_image--13" data-black-overlay="3">
+                    <div class="text-tagline">
+                        <h4>India’s Leading Used Commercial Vehicle and Car Finance Company</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 d-flex align-items-end">
+                <div class="raftar-qr">
+                    <p>http://sanjog.loan/</p>
+                    <h5>Existing Customers</h5>
+                    <p><i class="bi bi-telephone-fill"></i> +91 90739 07115<br>or<br>Scan below</p>
+                    <img src="{{ asset('frontend/assets/images/sanjog-qr.png')}}">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="main-section section-mobile" id="home">
+    <div class="container-fluid">
+        <div class="row">
+
+            <div class="col-12">
+                <div class="main-logos">
+                    <div class="text-logo">
+                        <img src="{{ asset('frontend/assets/images/aris-capital.png')}}">
+                    </div>
+
+                    <div class="hero-logo">
+                        <a href="#about-us">
+                            <img src="{{ asset('frontend/assets/images/Aris.png')}}">
+                        </a>
+                    </div>
+
+                    <div class="text-tagline">
+                        <h4>India’s Leading Used Commercial Vehicle and Car Finance Company</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 d-flex align-items-end">
+                <div class="raftar-qr">
+                    <p>https://raftar.loan</p>
+                    <h5>New Customers</h5>
+                    <p><i class="bi bi-telephone-fill"></i> +91 81009 87162 <br>or<br>Scan below</p>
+                    <img src="{{ asset('frontend/assets/images/raftar-qr.png')}}">
+                </div>
+            </div>
+            <div class="col-6 d-flex align-items-end">
+                <div class="raftar-qr">
+                    <p>http://sanjog.loan/</p>
+                    <h5>Existing Customers</h5>
+                    <p><i class="bi bi-telephone-fill"></i> +91 90739 07115<br>or<br>Scan below</p>
+                    <img src="{{ asset('frontend/assets/images/sanjog-qr.png')}}">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Begin:: Hero Section -->
+<section class="hero-section-1">
     <div class="container">
         <div class="row">
-            <div class="col-lg-12">
-                <div class="inner text-start">
-                    <h4 class="subtitle">ARIS Capital</h4>
-                    <h1 class="title display-one">India's leading commercial<br>vehicle finance company</h1>
-                    <div class="button-group mt--40 mt_sm--20"><a class="btn-default" target="_blank" href="#">Our Services</a></div>
+            <div class="col-md-7">
+                <div class="car-loan">
+                    <h1 style="color: #fff; font-weight: 600;">Giving wheels to your dreams</h1>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<!-- End Slider Area  -->
+</section>
+<!-- End:: Hero Section -->
 
-<!-- Start Call To Action  -->
-{{--<div class="rainbow-callto-action clltoaction-style-default style-6" data-sal="slide-up" data-sal-duration="700">
-    <div class="container">
-        <div class="row row--0 align-items-center content-wrapper">
-            <div class="col-lg-8 col-12">
-                <div class="inner">
-                    <div class="content text-start">
-                        <h2 class="title">Ready to start creating a standard website?</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-12">
-                <div class="call-to-btn text-start text-lg-end mt_md--20 mt_sm--20"><a class="btn-default" href="#">Purchase Doob</a></div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- End Call To Action  -->    
-<!-- Start Seperator Area  -->
-<div class="rbt-separator-mid">
-    <div class="container">
-        <hr class="rbt-separator m-0">
-    </div>
-</div>--}}
-<!-- End Seperator Area  -->
-
-
-
-<!-- Start Service-2 Area  -->
-<div class="rainbow-service-area rainbow-section-gap">
+<section class="chooseSection1" id="about-us">
     <div class="container">
         <div class="row">
-            <div class="col-lg-12">
-                <div class="section-title text-center" data-sal="slide-up" data-sal-duration="700" data-sal-delay="100">
-                    <h4 class="subtitle ">
-                        <span class="theme-gradient">What we can do for you</span>
-                    </h4>
-                    <h2 class="title w-600 mb--20">Services provide for you.</h2>
-                    <p class="description b1">There are many variations of passages of Lorem Ipsum
-                        available, <br>but the majority have suffered alteration.</p>
-                </div>
+            <div class="col-lg-12 text-center">
+                <h2 class="secTitle violet">Aris Capital</h2>
+                <p class="secDesc violet">
+                    We use our deep local and product knowledge to offer comprehensive financing solutions to our
+                    customers.
+                </p>
             </div>
         </div>
-
-        <div class="row service-wrapper">
-            <div class="col-lg-4 col-md-6 col-sm-6 col-12" data-sal="slide-up" data-sal-duration="700">
-                <div class="service service__style--1 bg-color-blackest radius mt--20 rbt-border text-start">
-                    <div class="icon">
-                        <img src="{{ asset('frontend/assets/images/services/truck.png')}}" style="width: 30%;">
-                    </div>
-                    <div class="content">
-                        <h4 class="title w-600">
-                            <a href="#">Heavy Commercial<br>Vehicle Loan</a>
-                        </h4>
-                        <p class="description b1 color-gray mb--0">Gross Vehicle Weight: 15 MT+</p>
+    </div>
+    <section class="our-products-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-4 col-md-4 col-12 text-center d-flex align-items-center justify-content-center">
+                    <div class="our-products">
+                        <h2 class="secTitle ">Our Products</h2>
                     </div>
                 </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 col-sm-6 col-12" data-sal="slide-up" data-sal-duration="700" data-sal-delay="200">
-                <div class="service service__style--1 bg-color-blackest radius mt--20 rbt-border text-start">
-                    <div class="icon">
-                        <img src="{{ asset('frontend/assets/images/services/delivery-truck.png')}}" style="width: 30%;">
-                    </div>
-                    <div class="content">
-                        <h4 class="title w-600">
-                            <a href="#">Light Commercial<br>Vehicle Loan</a>
-                        </h4>
-                        <p class="description b1 color-gray mb--0">Gross Vehicle Weight: 4-15 MT</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 col-sm-6 col-12" data-sal="slide-up" data-sal-duration="700" data-sal-delay="300">
-                <div class="service service__style--1 bg-color-blackest radius mt--20 rbt-border text-start">
-                    <div class="icon">
-                        <img src="{{ asset('frontend/assets/images/services/pickup-truck.png')}}" style="width: 30%;">
-                    </div>
-                    <div class="content">
-                        <h4 class="title w-600">
-                            <a href="#">Small Commercial<br>Vehicle Loan</a>
-                        </h4>
-                        <p class="description b1 color-gray mb--0">Gross Vehicle Weight: 4 MT</p>
+                <div class="col-xl-8 col-md-8 col-12 text-center">
+                    <div class="service-slider owl-carousel mt-2">
+                        <a><img src="{{ asset('frontend/assets/images/light-commercial.png')}}" alt="">Light Commercial Vehicle</a>
+                        <a><img src="{{ asset('frontend/assets/images/heavy-commercial.png')}}" alt="">Heavy Commecial Vehicle</a>
+                        <a><img src="{{ asset('frontend/assets/images/car.png')}}" alt="">4 Wheeler Passanger Commercial</a>
+                        <a><img src="{{ asset('frontend/assets/images/small-commercial.png')}}" alt="">Small Commercial Vehicle</a>
                     </div>
                 </div>
             </div>
         </div>
+    </section>
 
-
-        <div class="row service-wrapper">
-
-
-            <div class="col-lg-4 col-md-6 col-sm-6 col-12" data-sal="slide-up" data-sal-duration="700" data-sal-delay="300">
-                <div class="service service__style--1 bg-color-blackest radius mt--20 rbt-border text-start">
-                    <div class="icon">
-                        <img src="{{ asset('frontend/assets/images/services/tractor.png')}}" style="width: 30%;">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 mt-4">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="icon_box_05">
+                            <div class="ib_box">
+                                <div class="pin1"></div><i class="icon-local_1"></i>
+                                <div class="pin2"></div>
+                            </div>
+                            <h3>Integrity</h3>
+                            <p>We adhere to the highest ethical standard; employing fairness, probity and mutual
+                                respect in all we do.</p>
+                        </div>
                     </div>
-                    <div class="content">
-                        <h4 class="title w-600">
-                            <a href="#">Tractor Loan</a>
-                        </h4>
-                        <p class="description b1 color-gray mb--0">Gross Vehicle Weight: 4MT ( 38 to 55 HP )</p>
+                    <div class="col-md-6">
+                        <div class="icon_box_05">
+                            <div class="ib_box">
+                                <div class="pin1"></div><i class="icon-local_3"></i>
+                                <div class="pin2"></div>
+                            </div>
+                            <h3>Transparency &amp; Accountability</h3>
+                            <p>We give our clients complete and accurate information and educate them about the
+                                terms of financial services offered by us in a manner that is understandable by
+                                them.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="icon_box_05">
+                            <div class="ib_box">
+                                <div class="pin1"></div><i class="icon-XjxC7N01"></i>
+                                <div class="pin2"></div>
+                            </div>
+                            <h3>Professionalism</h3>
+                            <p>We exercise high levels of professionalism in our work and reward merit. We use the
+                                most appropriate skills and competencies, continually seeking opportunities to
+                                improve through innovative approaches.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="icon_box_05">
+                            <div class="ib_box">
+                                <div class="pin1"></div><i class="icon-local_11"></i>
+                                <div class="pin2"></div>
+                            </div>
+                            <h3>Teamwork</h3>
+                            <p>We collaborate with all our stakeholders by effectively interacting and proactively
+                                building effective and value adding relationships to achieve our shared goals.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="icon_box_05">
+                            <div class="ib_box">
+                                <div class="pin1"></div><i class="icon-local_11"></i>
+                                <div class="pin2"></div>
+                            </div>
+                            <h3>Customer Services</h3>
+                            <p>We actively seek to understand our customers’ circumstances, problems, expectations
+                                and needs with the aim of delighting and surpassing their expectations in our
+                                service delivery.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="icon_box_05">
+                            <div class="ib_box">
+                                <div class="pin1"></div><i class="icon-local_11"></i>
+                                <div class="pin2"></div>
+                            </div>
+                            <h3>Vision</h3>
+                            <p>Aris Capital wants to be a financial partner to the millions of unbanked Indians who
+                                help drive our economy everyday. Whether it is truck drivers, owners or first time
+                                entrepreneurs, Aris believes in developing long-term relationships with its
+                                customers and wishes to support their financial growth over the years.</p>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div class="col-lg-4 col-md-6 col-sm-6 col-12" data-sal="slide-up" data-sal-duration="700" data-sal-delay="300">
-                <div class="service service__style--1 bg-color-blackest radius mt--20 rbt-border text-start">
-                    <div class="icon">
-                        <img src="{{ asset('frontend/assets/images/services/sedan.png')}}" style="width: 30%;">
-                    </div>
-                    <div class="content">
-                        <h4 class="title w-600">
-                            <a href="#">4 Wheeler Passenger Commercial<br>Vehicle Loan</a>
-                        </h4>
-                        <p class="description b1 color-gray mb--0"></p>
-                    </div>
+
+            <div class="col-md-12 text-center">
+                <hr style="border-color:#000000; margin: 30px 0;">
+                <div class="our-journey pt-2">
+                    <h2 class="secTitle violet">Our Journey</h2>
+                    <p class="secDesc2">
+                        Aris Capital was incorporated on 22 February, 1995 as a Non Banking Finance Company
+                        regulated by the Reserve Bank of India with the objective of providing short and medium term
+                        loans and advances to small and medium businesses. Since then Aris has evolved into a
+                        leading asset finance company becoming a significant player in used commercial vehicle and
+                        car financing.
+                    </p>
+                    <p class="secDesc2">To further expand it’s business in Western India, Aris Capital acquired the
+                        entire business and loan portfolio of Indore headquartered, publicly listed Ad Manum Finance
+                        Limited in 2018, along with its network of 30 branches in Gujarat, Maharashtra and Madhya
+                        Pradesh. Ad Manum Finance was incorporated in 1986 in Indore and over the years grew to
+                        become a leading and well-known loan/hire purchase company in Western India.</p>
+
+                    <p class="secDesc2">Aris Capital services a customer base of over 10,000 car, truck, bus and
+                        tractor owners. It is dedicated to becoming the best asset finance company in India though a
+                        focus on Speed, Energy, Flexibility and adherence to ‘Bhadralok’ (gentlemanly) values.</p>
+                </div>
+               
+            </div>
+        </div>
+        <div class="row mt-2">
+            <div class="col-4">
+                <div class="fact_01 text-center">
+                    <h2><span class="counter" data-count="15">15</span><i>+</i></h2>
+                    <p>Year Of Experience</p>
                 </div>
             </div>
 
-            <div class="col-lg-4 col-md-6 col-sm-6 col-12" data-sal="slide-up" data-sal-duration="700" data-sal-delay="300">
-                <div class="service service__style--1 bg-color-blackest radius mt--20 rbt-border text-start">
-                    <div class="icon">
-                        <img src="{{ asset('frontend/assets/images/services/rikshaw.png')}}" style="width: 30%;">
-                    </div>
-                    <div class="content">
-                        <h4 class="title w-600">
-                            <a href="#">3 Wheeler Passenger Commercial<br>Vehicle Loan</a>
-                        </h4>
-                    </div>
+            <div class="col-4">
+                <div class="fact_01 text-center">
+                    <h2><span class="counter" data-count="10">10</span><i>K</i></h2>
+                    <p>Happy Customers</p>
+                </div>
+            </div>
+
+            <div class="col-4">
+                <div class="fact_01 text-center">
+                    <h2><span class="counter" data-count="30">30</span><i>+</i></h2>
+                    <p>Total Branches</p>
                 </div>
             </div>
         </div>
+    </div>
+</section>
+
+<!-- Counter Start -->
 
 
-        <div class="row service-wrapper">
-            <div class="col-lg-4 col-md-6 col-sm-6 col-12" data-sal="slide-up" data-sal-duration="700" data-sal-delay="200">
-                <div class="service service__style--1 bg-color-blackest radius mt--20 rbt-border text-start">
-                    <div class="icon">
-                        <img src="{{ asset('frontend/assets/images/services/bus.png')}}" style="width: 30%;">
-                    </div>
-                    <div class="content">
-                        <h4 class="title w-600">
-                            <a href="#">School Bus<br>Loan</a>
-                        </h4>
-                    </div>
+
+<!-- Client Logo Start -->
+<section class="clientLogo01">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-4 col-md-4 col-12 text-center d-flex align-items-center justify-content-center">
+                <h2 class="secTitle">Current and Past Banks<br>and Financial Institutions</h2>
+            </div>
+            <div class="col-xl-8 col-md-8 col-12 text-center">
+                <div class="client-slider owl-carousel">
+                    <a href=""><img src="{{ asset('frontend/assets/images/client-logo/Northern-Arc-Finance-ltd.png')}}" alt=""></a>
+                    <a href=""><img src="{{ asset('frontend/assets/images/client-logo/Bandhan_Bank.png')}}" alt=""></a>
+                    <a href=""><img src="{{ asset('frontend/assets/images/client-logo/HDFC-Bank.png')}}" alt=""></a>
+                    <a href=""><img src="{{ asset('frontend/assets/images/client-logo/Hinduja-ashok-leyland.png')}}" alt=""></a>
+                    <a href=""><img src="{{ asset('frontend/assets/images/client-logo/IDFC.png')}}" alt=""></a>
                 </div>
             </div>
+        </div>
+    </div>
+</section>
+<!-- Client Logo End -->
 
-            <div class="col-lg-4 col-md-6 col-sm-6 col-12" data-sal="slide-up" data-sal-duration="700" data-sal-delay="300">
-                <div class="service service__style--1 bg-color-blackest radius mt--20 rbt-border text-start">
-                    <div class="icon">
-                        <img src="{{ asset('frontend/assets/images/services/car-loan.png')}}" style="width: 30%;">
-                    </div>
-                    <div class="content">
-                        <h4 class="title w-600">
-                            <a href="#">Top Up Loans<br>(Including Insurance Loans)</a>
-                        </h4>
-                    </div>
+<section class="insurance-partner">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12 text-center">
+                <h2 class="secTitle">Insurance Partner</h2>
+                <div class="icici-insurance">
+                    <img src="{{ asset('frontend/assets/images/ICICI-Web-Banner.gif')}}" class="img-fluid">
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6 col-sm-6 col-12 justify-btn" data-sal="slide-up" data-sal-duration="700" data-sal-delay="300">
-                <div class="call-to-btn text-left mt_sm--20 text-lg-right">
-                    <a class="btn-default" href="{{url ('/services')}}">Know more
-                        <i class="feather-arrow-right"></i>
+        </div>
+    </div>
+</section>
+
+
+<!-- Career Start -->
+<section>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12 padding-0 text-center">
+                <div class="career-section">
+                    <h2 class="secTitle white">Shape the Future with Us – <span>Join Today!</span></h2>
+                    <p class="secDesc white">Your Future Awaits – Send Us Your CV!</p>
+                    <div class="clearfix"></div>
+                    <a href="mailto:hr@ariscapital.in">
+                        <h3 class="cust_btn">hr@ariscapital.in</h3>
                     </a>
                 </div>
             </div>
-
         </div>
     </div>
-</div>
-<!-- End Service-2 Area  -->
+</section>
+<!-- Career End -->
 
-<!-- Start Seperator Area  -->
-<div class="rbt-separator-mid">
-    <div class="container">
-        <hr class="rbt-separator m-0">
-    </div>
-</div>
-<!-- End Seperator Area  -->
 
-<!-- Start About Area  -->
-<div class="rainbow-about-area rainbow-section-gap">
-    <div class="container">
-        <div class="row row--30 align-items-center">
-            <div class="col-lg-5">
-                <div class="thumbnail" data-sal="slide-right" data-sal-duration="700">
-                    <img class="w-100" src="{{ asset('frontend/assets/images/about/about-1.png')}}" alt="About Images">
-                </div>
+<!-- Location Start -->
+<section class="appoinmentSection01">
+    <div class="container" id="locations">
+        <div class="row">
+            <div class="col-xl-12 text-center">
+                <h2 class="secTitle">We Are Located In</h2>
+                <p class="secDesc violet">
+                    30+ Branches in India
+                </p>
+                
+                <div id="map"></div>
             </div>
-            <div class="col-lg-7 mt_md--40 mt_sm--40">
-                <div class="content" data-sal="slide-left" data-sal-duration="700">
-                    <div class="section-title">
-                        <h4 class="subtitle"><span class="theme-gradient">Aris Capital Private Limited</span></h4>
-                        <h2 class="title mt--10">About Our Business.</h2>
-
-                        <p>We are a leading Non Banking Financial Company registered with the Reserve Bank of India.</p>
-                        <p>Since 1995, we have been successfully lending our proprietary capital to the most credit starved sections of India – Small and Medium Enterprises, First Time Entrepreneurs, Truck Drivers, Small Fleet Owners, Farmers and Low Income Families.</p>
-                        <div class="row">
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-12">
-                                <div class="count-box counter-style-4 text-start">
-                                    <div>
-                                        <div class="count-number"><span class="counter">10,000</span></div>
-                                    </div>
-                                    <h5 class="counter-title">Satisfied Customers</h5>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-12">
-                                <div class="count-box counter-style-4 text-start">
-                                    <div>
-                                        <div class="count-number"><span class="counter">30</span></div>
-                                    </div>
-                                    <h5 class="counter-title">Branches</h5>
-                                </div>
-                            </div>
-                        </div>
-                        {{--<ul class="list-icon">
-                            <li><span class="icon">
-                                    <i class="feather-check"></i>
-                                </span> 30+ Branches In East India & West India
-                            </li>
-                            <li><span class="icon">
-                                    <i class="feather-check"></i>
-                                </span> More than 10,000 Satisfied Customers</li>
-                        </ul>--}}
-
-                        <div class="read-more-btn mt--40">
-                            <a class="btn-default btn-icon" target="_blank" href="{{url ('/about')}}">More About Us <i class="icon feather-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- End About Area  -->
-
-<!-- Start Seperator Area  -->
-<div class="rbt-separator-mid">
-    <div class="container">
-        <hr class="rbt-separator m-0">
-    </div>
-</div>
-<!-- End Seperator Area  -->
-
-<!-- Start Split Area  -->
-<div class="rainbow-split-area">
-    <div class="wrapper">
-        <div class="rainbow-splite-style bg-color-blackest">
-            <div class="split-wrapper">
-                <div class="row g-0 radius-10 align-items-center">
-                    <div class="col-lg-12 col-xl-6 col-12">
-                        <div class="thumbnail"><img src="{{ asset('frontend/assets/images/split/split-03.jpg')}}" alt="split Images">
-                        </div>
-                    </div>
-                    <div class="col-lg-12 col-xl-6 col-12">
-                        <div class="split-inner">
-                            <h4 class="title">Important Information</h4>
-                            <div class="row">
-                                <ul class="list-icon">
-                                    <li><span class="icon">
-                                            <i class="feather-check"></i>
-                                        </span> GRIEVANCE REDRESSAL OFFICER | Mr. Karan Kotak | Email id: Finance@ariscapital.in
-                                    </li>
-                                    <li>
-                                        <span class="icon">
-                                            <i class="feather-check"></i>
-                                        </span> CUSTOMER GRIEVANCE REDRESSAL POLICY | January 2019 <a href="" class="pdf-download"> <img src="{{ asset('frontend/assets/images/icons/pdf.png')}}" alt=""></a>
-                                    </li>
-                                    <li>
-                                        <span class="icon">
-                                            <i class="feather-check"></i>
-                                        </span> CUSTOMER GRIEVANCE REDRESSAL POLICY | January 2019 <a href="" class="pdf-download"> <img src="{{ asset('frontend/assets/images/icons/pdf.png')}}" alt=""></a>
-                                    </li>
-                                    <li>
-                                        <span class="icon">
-                                            <i class="feather-check"></i>
-                                        </span> CUSTOMER GRIEVANCE REDRESSAL POLICY | January 2019 <a href="" class="pdf-download"> <img src="{{ asset('frontend/assets/images/icons/pdf.png')}}" alt=""></a>
-                                    </li>
-                                    <li><span class="icon">
-                                            <i class="feather-check"></i>
-                                        </span> GRIEVANCE REDRESSAL OFFICER | Mr. Karan Kotak | Email id: Finance@ariscapital.in
-                                    </li>
-                                    <li>
-                                        <span class="icon">
-                                            <i class="feather-check"></i>
-                                        </span> CUSTOMER GRIEVANCE REDRESSAL POLICY | January 2019 <a href="" class="pdf-download"> <img src="{{ asset('frontend/assets/images/icons/pdf.png')}}" alt=""></a>
-                                    </li>
-                                    <li>
-                                        <span class="icon">
-                                            <i class="feather-check"></i>
-                                        </span> CUSTOMER GRIEVANCE REDRESSAL POLICY | January 2019 <a href="" class="pdf-download"> <img src="{{ asset('frontend/assets/images/icons/pdf.png')}}" alt=""></a>
-                                    </li>
-                                    <li>
-                                        <span class="icon">
-                                            <i class="feather-check"></i>
-                                        </span> CUSTOMER GRIEVANCE REDRESSAL POLICY | January 2019 <a href="" class="pdf-download"> <img src="{{ asset('frontend/assets/images/icons/pdf.png')}}" alt=""></a>
-                                    </li>
+            <div class="col-xl-6">
+                <div class="state-branch-box">
+                    <h4 class="violet">Maharashtra</h4>
+                    <div class="row">
+                        <div class="col-md-6 col-6">
+                            <div class="state-branch">
+                                <ul>
+                                    <li><i class="bi bi-geo-alt"></i> Akola</li>
+                                    <li><i class="bi bi-geo-alt"></i> Amravati</li>
+                                    <li><i class="bi bi-geo-alt"></i> Aurangabad</li>
+                                    <li><i class="bi bi-geo-alt"></i> Chalisgaon</li>
+                                    <li><i class="bi bi-geo-alt"></i> Chikhli</li>
+                                    <li><i class="bi bi-geo-alt"></i> Dhule</li>
                                 </ul>
-                                <div class="read-more-btn mt--40">
-                                    <a class="btn-default btn-icon" target="_blank" href="#">More Info <i class="icon feather-arrow-right"></i></a>
-                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-6">
+                            <div class="state-branch state-branch-1">
+                                <ul>
+                                    <li><i class="bi bi-geo-alt"></i> Jalgaon</li>
+                                    <li><i class="bi bi-geo-alt"></i> Khargone</li>
+                                    <li><i class="bi bi-geo-alt"></i> Malegaon</li>
+                                    <li><i class="bi bi-geo-alt"></i> Nashik</li>
+                                    <li><i class="bi bi-geo-alt"></i> Sendwaha</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-6">
+                <div class="state-branch-box">
+                    <h4 class="violet">Gujarat</h4>
+                    <div class="row">
+                        <div class="col-md-6 col-6">
+                            <div class="state-branch">
+                                <ul>
+                                    <li><i class="bi bi-geo-alt"></i> Ahmadabad</li>
+                                    <li><i class="bi bi-geo-alt"></i> Bhuj</li>
+                                    <li><i class="bi bi-geo-alt"></i> Bhavnagar</li>
+                                    <li><i class="bi bi-geo-alt"></i> Jamanagar</li>
+                                    <li><i class="bi bi-geo-alt"></i> Mehsana</li>
+                                    <li><i class="bi bi-geo-alt"></i> Palanpur</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-6">
+                            <div class="state-branch state-branch-1">
+                                <ul>
+                                    <li><i class="bi bi-geo-alt"></i> Rajkot</li>
+                                    <li><i class="bi bi-geo-alt"></i> Veraval</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -328,228 +385,172 @@
             </div>
         </div>
     </div>
-</div>
-<!-- End Split Area  -->
+</section>
+<!-- Location End -->
 
-<div class="rbt-feature-area rainbow-section-gap">
-    <div class="container">
-        <!-- Start Feature Service  -->
-        <div class="row g-5">
-            <!-- Start Single Service  -->
-            <div class="col-lg-3 col-md-6 col-sm-6 col-12 sal-animate">
-                <div class="service service__style--1 text-left service-bg-transparent">
-                    <div class="icon">
-                        <i class="feather-percent theme-gradient"></i>
-                    </div>
-                    <div class="content">
-                        <h4 class="title w-600"><a href="#">Loan Calculator</a></h4>
-                        <div class="read-more-btn mt--30">
-                            <a class="btn-default btn-icon" target="_blank" href="#">Calculate</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- End Single Service  -->
-            <!-- Start Single Service  -->
-            <div class="col-lg-3 col-md-6 col-sm-6 col-12 sal-animate">
-                <div class="service service__style--1 text-left service-bg-transparent">
-                    <div class="icon">
-                        <i class="feather-map theme-gradient"></i>
-                    </div>
-                    <div class="content">
-                        <h4 class="title w-600"><a href="#">Branch Locations</a></h4>
-                        <div class="read-more-btn mt--30">
-                            <a class="btn-default btn-icon" target="_blank" href="#">Locations</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- End Single Service  -->
-            <!-- Start Single Service  -->
-            <div class="col-lg-3 col-md-6 col-sm-6 col-12 sal-animate">
-                <div class="service service__style--1 text-left service-bg-transparent">
-                    <div class="icon">
-                        <i class="feather-file-text theme-gradient"></i>
-                    </div>
-                    <div class="content">
-                        <h4 class="title w-600"><a href="#">Important Information</a></h4>
-                        <div class="read-more-btn mt--30">
-                            <a class="btn-default btn-icon" target="_blank" href="#">Offers</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- End Single Service  -->
-            <!-- Start Single Service  -->
-            <div class="col-lg-3 col-md-6 col-sm-6 col-12 sal-animate">
-                <div class="service service__style--1 text-left service-bg-transparent">
-                    <div class="icon">
-                        <i class="feather-file-plus theme-gradient"></i>
-                    </div>
-                    <div class="content">
-                        <h4 class="title w-600"><a href="#">Apply For Loan</a></h4>
-                        <div class="read-more-btn mt--30">
-                            <a class="btn-default btn-icon" target="_blank" href="#">Apply Now</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- End Single Service  -->
-        </div>
-        <!-- End Feature Service  -->
-    </div>
-</div>
 
-<!-- Start Style Two  -->
-<div class="collaborate-card-area rainbow-section-gap">
+
+<!-- Important Info Start -->
+<section class="serviceSection01" id="imp-info">
     <div class="container">
         <div class="row">
-            <div class="col-lg-12">
-                <div class="section-title  text-left sal-animate">
-                    <h3 class="title mb--20">Say Hi, Aris Capital or just 👋🏾</h3>
+            <div class="col-xl-12">
+                <h2 class="secTitle">Important Information</h2>
+                <div class="boxService">
+                    <div class="imp-info-list">
+                        <ul>
+                            <li>
+                                <a href="javascript:void(0)"><i class="bi bi-chevron-double-right"></i> Grievance Redressal Officer | Averi Misra | Email id:
+                                    cs@ariscapital.in</a>
+                            </li>
+                            <li>
+                                <a href="{{ asset('frontend/assets/pdf/privacy-policy.pdf')}}" download><i class="bi bi-chevron-double-right"></i> Privacy Policy | January 2024</a>
+                            </li>
+                            <li>
+                                <a href="{{ asset('frontend/assets/pdf/Terms-Conditions.pdf')}}" download><i class="bi bi-chevron-double-right"></i> Terms & Conditions | January
+                                    2024</a>
+                            </li>
+                            <li>
+                                <a href="{{ asset('frontend/assets/pdf/Refund-Policy.pdf')}}" download><i class="bi bi-chevron-double-right"></i> Aris Refund Policy | January
+                                    2023</a>
+                            </li>
+                            <li>
+                                <a href="{{ asset('frontend/assets/pdf/Fair-Practice.pdf')}}" download><i class="bi bi-chevron-double-right"></i> Fair Practice Code Policy |
+                                    January 2019</a>
+                            </li>
+                            <li>
+                                <a href="{{ asset('frontend/assets/pdf/Customer-Grievance.pdf')}}" download><i class="bi bi-chevron-double-right"></i> Customer Grievance Redressal
+                                    Policy | January 2019</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="row row--10">
-            <div class="col-lg-4 col-md-6 col-sm-12 col-12 mt--20">
-                <div class="service service__style--1 variation-2 variation-3 bg-lessdark-gradient radius text-left h-100">
-                    <div class="content">
-                        <h6 class="subtitle"><span class="theme-gradient">Aris Capital</span></h6>
-                        <h4 class="title w-600">
-                            <a href="#">Board of Directors</a>
-                        </h4>
-                        <p class="description b1 color-gray mb--0">Our Board Of Industry Veterans Provide Mentorship To The Management Team.
-                        </p>
-                        <div class="read-more-btn mt--30">
-                            <a class="btn-default btn-icon" target="_blank" href="#">Meet Our Directors</a>
-                        </div>
 
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="col-lg-8 col-md-6 col-sm-12 col-12 mt--20">
-                <div class="service service__style--1 variation-2 variation-3 radius text-left h-100 bg_image bg_image--2">
-                    <div class="content">
-
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="col-lg-7 col-md-6 col-sm-12 col-12 mt--20">
-                <div class="service service__style--1 variation-2 variation-3 radius text-left h-100 bg_image bg_image--2">
-                    <div class="content">
-
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="col-lg-5 col-md-6 col-sm-12 col-12 mt--20">
-                <div class="service service__style--1 variation-2 variation-3 bg-lessdark-gradient radius text-left h-100">
-                    <div class="content">
-                        <h6 class="subtitle"><span class="theme-gradient">Aris Capital</span></h6>
-                        <h4 class="title w-600">
-                            <a href="#">Our Team</a>
-                        </h4>
-                        <p class="description b1 color-gray mb--0">Led by a professional management team consisting of a young, innovative Sales and Structuring Department supplemented by a mature, seasoned Credit Department ensuring prudent administration of time-tested lending & risk policies.
-                        </p>
-                        <div class="read-more-btn mt--30">
-                            <a class="btn-default btn-icon" target="_blank" href="#">Meet Us</a>
-                        </div>
-
-                    </div>
-
-                </div>
-            </div>
-
-        </div>
     </div>
-</div>
-<!-- End Testimonial Style Two  -->
+</section>
+<!-- Important Info End -->
 
-<!-- Start Seperator Area  -->
-<div class="rbt-separator-mid">
-    <div class="container">
-        <hr class="rbt-separator m-0">
-    </div>
-</div>
-<!-- End Seperator Area  -->
 
-<!-- Start Blog Area  -->
-<div class="blog-area rainbow-section-gap">
+
+<!-- Staff Start -->
+<section class="processSection01" id="teams">
     <div class="container">
         <div class="row">
-            <div class="col-lg-12">
-                <div class="section-title text-center" data-sal="slide-up" data-sal-duration="700" data-sal-delay="100">
-                    <h4 class="subtitle "><span class="theme-gradient">Blogs</span></h4>
-                    <h2 class="title w-600 mb--20">Recent Insights & News.</h2>
-                    <p class="description b1">Your source for inspiring stories, insights and <br>current news updates.</p>
+            <div class="col-lg-6">
+                <!-- <div class="board-img"></div> -->
+                <div class="teams-text">
+                    <h2 class="secTitle mb-2">Board of Directors</h2>
+                    <p>"ARIS Capital’s Board of Directors is dedicated to driving strategic growth and fostering
+                        innovation in every aspect of our business. Their expertise and leadership guide the company
+                        toward continued success and market leadership."</p>
+
+                    <a href="{{url('our-board-of-directors')}}" class="qu_btn">Meet Our Directors</a>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <!-- <div class="teams-img"></div> -->
+                <div class="teams-text">
+                    <h2 class="secTitle mb-2">Our Team</h2>
+                    <p>Led by a professional management team consisting of a young, innovative Sales and Structuring
+                        Department supplemented by a mature, seasoned Credit Department ensuring prudent
+                        administration of time-tested lending & risk policies.</p>
+
+                    <a href="{{url('our-team')}}" type="submit" class="qu_btn">Meet Us</a>
                 </div>
             </div>
         </div>
-        <div class="row row--15">
+    </div>
+</section>
+<!-- Staff End -->
 
-            <div class="col-lg-4 col-md-6 col-sm-12 col-12 mt--30">
-                <div class="rainbow-card box-card-style-default">
-                    <div class="inner">
-                        <div class="thumbnail"><a class="image" href="#"><img src="{{ asset('frontend/assets/images/blog/blog-01.jpg')}}" alt="Blog Image"></a></div>
-                        <div class="content">
-                            <ul class="rainbow-meta-list">
-                                <li><a href="#">Irin Pervin</a></li>
-                                <li class="separator">/</li>
-                                <li>10 Dec 2021</li>
-                            </ul>
-                            <h4 class="title"><a href="#">Best Corporate Tips You Will Read This
-                                    Year.</a></h4>
-                        </div>
-                    </div>
-                </div>
+
+
+<!-- Media & News End -->
+<section class="media-section" id="media">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-12">
+                <h3 class="secTitle mb-4">Media & News</h3>
             </div>
-
-            <div class="col-lg-4 col-md-6 col-sm-12 col-12 mt--30">
-                <div class="rainbow-card box-card-style-default">
-                    <div class="inner">
-                        <div class="thumbnail"><a class="image" href="#"><img src="{{ asset('frontend/assets/images/blog/blog-02.jpg')}}" alt="Blog Image"></a></div>
-                        <div class="content">
-                            <ul class="rainbow-meta-list">
-                                <li><a href="#">Fatima Asrafy</a></li>
-                                <li class="separator">/</li>
-                                <li>30 Nov 2021</li>
-                            </ul>
-                            <h4 class="title"><a href="#">Should Fixing Corporate Take 100
-                                    Steps.</a></h4>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 col-sm-12 col-12 mt--30">
-                <div class="rainbow-card box-card-style-default">
-                    <div class="inner">
-                        <div class="thumbnail">
-                            <a class="image" href="#"><img src="{{ asset('frontend/assets/images/blog/blog-03.jpg')}}" alt="Blog Image"></a>
-                        </div>
-                        <div class="content">
-                            <ul class="rainbow-meta-list">
-                                <li><a href="#">John Dou</a></li>
-                                <li class="separator">/</li>
-                                <li>12 Oct 2021</li>
-                            </ul>
-                            <h4 class="title"><a href="#">The Next 100 Things To Immed Iately Do
-                                    About.</a></h4>
-                        </div>
+        </div>
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="news-media">
+                    <div class="owl-carousel owl-theme">
+                        <div class="item"><img src="{{ asset('frontend/assets/images/news/1.jpg')}}"></div>
+                        <div class="item"><img src="{{ asset('frontend/assets/images/news/2.jpg')}}"></div>
+                        <div class="item"><img src="{{ asset('frontend/assets/images/news/3.jpg')}}"></div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<!-- End Blog Area  -->
+</section>
+
+<!-- Media & News End -->
 
 
+<section class="coniconboxPage" id="contact-us">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-12">
+                <div class="contact-us">
 
+                    <div class="contact-box">
+                        <h3><i class="bi bi-telephone-fill"></i> Call Us For Help:</h3>
+                        <hr>
+                        <p><a href="tel:+91 33 4050 8300"><i class="bi bi-headphones"></i> +91 33 4050 8300</a></p>
+                        <p><a href="tel:+91 9073907115"><i class="bi bi-telephone-fill"></i> +91 9073907115</a></p>
+                        <p><a href="mailto:finance@ariscapital.in"><i class="bi bi-envelope-at-fill"></i>
+                                finance@ariscapital.in</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-12">
+                <div class="contact-us">
+                    <div class="contact-box">
+                        <h3><i class="bi bi-briefcase-fill"></i> Corporate Office:</h3>
+                        <hr>
+                        <p><a href="#">PS Srijan Corporate Park, Tower 1, Unit 703<br> Block GP,Sec 5,Salt lake<br>
+                                Kolkata 700091,India</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-12">
+                <div class="contact-us">
+                    <div class="contact-box">
+                        <h3><i class="bi bi-briefcase-fill"></i> Registered Office:</h3>
+                        <hr>
+                        <p><a href="#">60 C, Coolootola Street,<br>Kolkata -700073 India</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="support">
+                    <div class="spIcon">
+                        <i class="twi-phone"></i>
+                        <img src="{{ asset('frontend/assets/images/1.jpg')}}" alt="">
+                    </div>
+                    <p><span>Existing Customers:</span> To request a copy of our fair practices code or to escalate
+                        any grievance, please contact our
+                        grievance officer</p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="icon_box_04 existing-contact">
+                    <div class="ib_box"><i class="twi-comments-alt-dollar"></i></div>
+                    <p>Have any Questions?</p>
+
+                    <h5><i class="bi bi-telephone-fill"></i> +91 33 4050 8300</h5>
+                    <h5><i class="bi bi-envelope-at-fill"></i> cs@ariscapital.in</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 @endsection

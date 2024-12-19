@@ -37,7 +37,7 @@ Teams
                                 <tbody>
                                     @foreach($data as $row)
                                     <tr>
-                                        <th scope="row">{{$count++}}</th>
+                                        <th scope="row">{{++$count}}</th>
                                         <td>
                                             @if($row->image)
                                             <img src="{{ asset($row->image) }}" alt="Team Member Image" width="100" height="100" style="object-fit: cover;">
