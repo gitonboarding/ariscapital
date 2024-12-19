@@ -1,6 +1,6 @@
 @extends('backend.layouts.index')
 @section('title')
-Teams
+Blogs
 @endsection
 @section('contents')
 <section class="section">
@@ -11,31 +11,28 @@ Teams
         <div class="col-lg-8">
             <div class="card">
                 <div class="card-body">
-                    <h5 class="card-title">Team Member Information</h5>
+                    <h5 class="card-title">Create a blog</h5>
 
                     <!-- Form for Team Information -->
-                    <form class="row g-3" method="POST" action="{{ route('team.save') }}" enctype="multipart/form-data">
+                    <form class="row g-3" action="{{url('blog/save')}}" method="post" enctype="multipart/form-data">
                         @csrf
-                        <!-- Name -->
+                        <!-- Title -->
                         <div class="col-12">
-                            <label for="teamName" class="form-label">Name</label>
-                            <input type="text" class="form-control" id="teamName" name="name" value="" placeholder="Enter name" required>
-                        </div>
-                        <!-- Position -->
-                        <div class="col-12">
-                            <label for="teamPosition" class="form-label">Position</label>
-                            <input type="text" class="form-control" id="teamPosition" name="position" value="" placeholder="Enter position" required>
+                            <label for="blogTitle" class="form-label">Title</label>
+                            <input type="text" class="form-control" id="blogTitle" name="title" value="" placeholder="Enter the title here" required>
                         </div>
 
                         <!-- Description -->
                         <div class="col-12">
-                            <label for="teamDescription" class="form-label">Description</label>
-                            <textarea class="form-control" id="teamDescription" name="description" value="" rows="4" placeholder="Enter a brief description"></textarea>
+                            <label for="blogDescription" class="form-label">Description</label>
+                            <textarea class="form-control" id="blogDescription" name="description" value="" rows="4" placeholder="Enter the blog description"></textarea>
                         </div>
 
-                        <!-- Image Upload -->
+                        <!-- Featured Image -->
                         <div class="col-12">
-                            <label for="teamImage" class="form-label">Upload Image</label>
+                            <label for="blogImage" class="form-label">Featured Image</label>
+
+
                             <input type="file" id="image" name="image" class="form-control">
                             <img src="#" id="image_preview" class="d-none img-fluid rounded mt-2 mb-2" width="100" height="100">
                         </div>

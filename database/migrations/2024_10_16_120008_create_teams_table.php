@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('position');
             $table->text('description')->nullable();
             $table->string('image')->nullable(); // To store the image path
+            $table->softDeletes();
             $table->timestamps();
         });
     }

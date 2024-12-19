@@ -14,7 +14,7 @@ Board
                     <h5 class="card-title">Board Of Director Information</h5>
 
                     <!-- Form for Team Information -->
-                    <form class="row g-3" action="{{url('board/save')}}" method="post"  enctype="multipart/form-data">
+                    <form class="row g-3" action="{{url('board/save')}}" method="post" enctype="multipart/form-data">
                         @csrf
                         <!-- Name -->
                         <div class="col-12">
@@ -36,7 +36,8 @@ Board
                         <!-- Image Upload -->
                         <div class="col-12">
                             <label for="boardImage" class="form-label">Upload Image</label>
-                            <input type="file" class="form-control" id="boardImage" name="image" value="" required>
+                            <input type="file" id="image" name="image" class="form-control">
+                            <img src="#" id="image_preview" class="d-none img-fluid rounded mt-2 mb-2" width="100" height="100">
                         </div>
 
                         <div class="text-center">
@@ -55,13 +56,23 @@ Board
 </main>
 
 <script>
-    // JavaScript to handle image preview
-    function previewImage(event) {
-        const imagePreview = document.getElementById('profileImagePreview');
-        imagePreview.src = URL.createObjectURL(event.target.files[0]);
-        imagePreview.onload = () => {
-            URL.revokeObjectURL(imagePreview.src); // free memory
+    ClassicEditor.create(document.querySelector('#blogDescription'))
+        .catch(error => {
+            console.error(error);
+        });
+</script>
+<script>
+    const input = document.getElementById("image");
+    const preview = document.getElementById("image_preview");
+    input.addEventListener('change', function() {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function(e) {
+                preview.classList.remove('d-none');
+                preview.setAttribute('src', e.target.result);
+            }
+            reader.readAsDataURL(input.files[0]);
         }
-    }
+    });
 </script>
 @endsection

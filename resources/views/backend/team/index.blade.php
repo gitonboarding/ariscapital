@@ -14,20 +14,22 @@ Teams
                 <!-- Recent Sales -->
                 <div class="col-12">
                     <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Team members</h5>
+                        <div class="card-body position-relative">
+                            <h5 class="card-title">Team Members</h5>
 
-                            <a href="{{route('team.create')}}" type="button" class="btn btn-primary">Create</a>
+                            <a href="{{route('team.create')}}" type="button" class="btn btn-primary position-absolute top-0 end-0 m-3">Add Member</a>
+                            <hr>
 
                             <!-- Table with hoverable rows -->
+                            @if (count($data) > 0)
                             <table class="table table-hover">
                                 <thead>
                                     <tr>
                                         <th scope="col">#</th>
                                         <th scope="col">Image</th>
-                                        <th scope="col">Name</th>
-                                        <th scope="col">Position</th>
-                                        <th scope="col">Description</th>
+                                        <th scope="col" class="w-20">Name</th>
+                                        <th scope="col" class="w-20">Position</th>
+                                        <th scope="col" class="w-50">Description</th>
                                         <th scope="col">Action</th>
                                     </tr>
                                 </thead>
@@ -40,7 +42,7 @@ Teams
                                         <th scope="row">{{++$count}}</th>
                                         <td>
                                             @if($row->image)
-                                            <img src="{{ asset($row->image) }}" alt="Team Member Image" width="100" height="100" style="object-fit: cover;">
+                                            <img src="{{ asset($row->image) }}" alt="Team Member" width="60" height="60" style="object-fit: cover;">
                                             @else
                                             <span>No Image</span>
                                             @endif
@@ -48,20 +50,20 @@ Teams
                                         <td>{{$row->name}}</td>
                                         <td>{{$row->position}}</td>
                                         <td>{{$row->description}}</td>
-                                        <td><a href="{{route('team.edit',$row->id)}}"><i class="bi bi-pencil-square"></i></a>&nbsp;<a href="{{route('team.delete',$row->id)}}"><i class="bi bi-trash-fill" style="color: #f00;"></i></a></td>
+                                        <td><a href="{{route('team.edit',$row->id)}}"><i class="bi bi-pencil-square"></i></a>&nbsp;<a onclick="return confirm('Are you sure?')" href="{{route('team.delete',$row->id)}}"><i class="bi bi-trash-fill" style="color: #f00;"></i></a></td>
                                     </tr>
                                     @endforeach
                                 </tbody>
                             </table>
+                            @else
+                            <h4 class="text-center">No data</h4>
+                            @endif
                             <!-- End Table with hoverable rows -->
-
                         </div>
                     </div>
                 </div><!-- End Recent Sales -->
-
             </div>
         </div><!-- End  columns -->
-
     </div>
 </section>
 

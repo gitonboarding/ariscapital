@@ -10,8 +10,7 @@
     <meta content="" name="keywords">
 
     <!-- Favicons -->
-    <link href="{{ asset('backend/assets/img/favicon.png') }}" rel="icon">
-    <link href="{{ asset('backend/assets/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
+    <link href="{{ asset('backend/assets/img/favicon-white.png') }}" rel="icon">
 
     <!-- Google Fonts -->
     <link href="https://fonts.gstatic.com" rel="preconnect">
@@ -30,7 +29,21 @@
     <link href="{{ asset('backend/assets/css/style.css') }}" rel="stylesheet">
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet" />
+    <script src="https://cdn.ckeditor.com/ckeditor5/23.0.0/classic/ckeditor.js"></script>
 </head>
+
+<style>
+.sidebar-nav .nav-item.active a {
+    color: black;
+}
+
+.sidebar-nav .nav-item.active i {
+    font-size: 16px;
+    margin-right: 10px;
+    color: #000;
+}
+
+</style>
 
 
 <body>
@@ -40,17 +53,10 @@
 
         <div class="d-flex align-items-center justify-content-between">
             <a href="index.html" class="logo d-flex align-items-center">
-                <span class="d-none d-lg-block">Aris Capital</span>
+                <span class="d-none d-lg-block"><img src="{{asset('backend/assets/img/aris-logo.png')}}" /></span>
             </a>
             <i class="bi bi-list toggle-sidebar-btn"></i>
         </div><!-- End Logo -->
-
-        <div class="search-bar">
-            <form class="search-form d-flex align-items-center" method="POST" action="#">
-                <input type="text" name="query" placeholder="Search" title="Enter search keyword">
-                <button type="submit" title="Search"><i class="bi bi-search"></i></button>
-            </form>
-        </div><!-- End Search Bar -->
 
         <nav class="header-nav ms-auto">
             <ul class="d-flex align-items-center">
@@ -66,44 +72,13 @@
                 <li class="nav-item dropdown pe-3">
 
                     <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-                        <img src="" alt="Profile" class="rounded-circle">
-                        <span class="d-none d-md-block dropdown-toggle ps-2">admin</span>
+                        <span class="d-none d-md-block dropdown-toggle ps-2">Admin</span>
                     </a><!-- End Profile Iamge Icon -->
 
                     <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
                         <li class="dropdown-header">
                             <h6>{{ Auth::user()->name }}</h6>
                             <span>{{ Auth::user()->email }}</span>
-                        </li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-
-                        <li>
-                            <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
-                                <i class="bi bi-person"></i>
-                                <span>My Profile</span>
-                            </a>
-                        </li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-
-                        <li>
-                            <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
-                                <i class="bi bi-gear"></i>
-                                <span>Account Settings</span>
-                            </a>
-                        </li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-
-                        <li>
-                            <a class="dropdown-item d-flex align-items-center" href="pages-faq.html">
-                                <i class="bi bi-question-circle"></i>
-                                <span>Need Help?</span>
-                            </a>
                         </li>
                         <li>
                             <hr class="dropdown-divider">
@@ -134,27 +109,35 @@
 
         <ul class="sidebar-nav" id="sidebar-nav">
 
-            <li class="nav-item">
-                <a class="nav-link" href="{{url ('/dashboard')}}">
+            <li class="nav-item {{ request()->is('dashboard') ? 'active' : '' }}">
+                <a class="nav-link" href="{{url('/dashboard')}}">
                     <i class="bi bi-grid"></i>
                     <span>Dashboard</span>
                 </a>
-            </li><!-- End Dashboard Nav -->
-            <li class="nav-item">
-                <a class="nav-link " href="{{route('team.index')}}">
-                    <i class="bi bi-people"></i>
+            </li>
+            <li class="nav-item {{ request()->is('team*') ? 'active' : '' }}">
+                <a class="nav-link" href="{{ route('team.index') }}">
+                    <i class="bi bi-diagram-3"></i>
                     <span>Teams</span>
                 </a>
-            </li><!-- End Dashboard Nav -->
-            <li class="nav-item">
-                <a class="nav-link " href="{{route('board.index')}}">
-                    <i class="bi bi-grid"></i>
+            </li>
+            <li class="nav-item {{ request()->is('board*') ? 'active' : '' }}">
+                <a class="nav-link" href="{{ route('board.index') }}">
+                    <i class="bi bi-people"></i>
                     <span>Board</span>
                 </a>
-            </li><!-- End Dashboard Nav -->
+            </li>
+            <li class="nav-item {{ request()->is('blog*') ? 'active' : '' }}">
+                <a class="nav-link" href="{{ route('blog.index') }}">
+                    <i class="bi bi-file-earmark-richtext"></i>
+                    <span>Blogs</span>
+                </a>
+            </li>
+
         </ul>
+
     </aside><!-- End Sidebar-->
-    
+
     <main id="main" class="main">
         <div class="pagetitle">
             <h1>@yield('title')</h1>

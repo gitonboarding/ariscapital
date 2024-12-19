@@ -19,24 +19,25 @@ Board
                         <!-- Name -->
                         <div class="col-12">
                             <label for="boardName" class="form-label">Name</label>
-                            <input type="text" class="form-control" id="boardName" name="name" value="{{$data->name}}" placeholder="Enter name" required>
+                            <input type="text" class="form-control" id="boardName" name="name" value="{{old('name',$data->name)}}" placeholder="Enter name" required>
                         </div>
                         <!-- Position -->
                         <div class="col-12">
                             <label for="boardPosition" class="form-label">Position</label>
-                            <input type="text" class="form-control" id="boardPosition" name="position" value="{{$data->position}}" placeholder="Enter position" required>
+                            <input type="text" class="form-control" id="boardPosition" name="position" value="{{old('position',$data->position)}}" placeholder="Enter position" required>
                         </div>
 
                         <!-- Description -->
                         <div class="col-12">
                             <label for="boardDescription" class="form-label">Description</label>
-                            <textarea class="form-control" id="teamDescription" name="description" value="" rows="4" placeholder="Enter a brief description">{{$data->description}}</textarea>
+                            <textarea class="form-control" id="teamDescription" name="description" value="" rows="4" placeholder="Enter a brief description">{{old('desription', $data->description)}}</textarea>
                         </div>
 
                         <!-- Image Upload -->
                         <div class="col-12">
                             <label for="boardImage" class="form-label">Upload Image</label>
-                            <input type="file" class="form-control" id="boardImage" name="image" value="" required>
+                            <input type="file" id="image" name="image" class="form-control">
+                            <img src="{{asset($data->image)}}" id="image_preview" class="img-fluid rounded mt-2 mb-2" width="100" height="100">
                         </div>
 
                         <div class="text-center">
