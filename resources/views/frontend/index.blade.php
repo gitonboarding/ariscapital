@@ -227,7 +227,7 @@
                         tractor owners. It is dedicated to becoming the best asset finance company in India though a
                         focus on Speed, Energy, Flexibility and adherence to ‘Bhadralok’ (gentlemanly) values.</p>
                 </div>
-               
+
             </div>
         </div>
         <div class="row mt-2">
@@ -323,66 +323,35 @@
                 <p class="secDesc violet">
                     30+ Branches in India
                 </p>
-                
+
                 <div id="map"></div>
             </div>
+
+            @foreach ($groupedLocations as $state => $locations)
             <div class="col-xl-6">
                 <div class="state-branch-box">
-                    <h4 class="violet">Maharashtra</h4>
+                    <h4 class="violet">{{ $state }}</h4>
                     <div class="row">
+                        @foreach ($locations->chunk(ceil($locations->count() / 2)) as $chunk)
                         <div class="col-md-6 col-6">
                             <div class="state-branch">
                                 <ul>
-                                    <li><i class="bi bi-geo-alt"></i> Akola</li>
-                                    <li><i class="bi bi-geo-alt"></i> Amravati</li>
-                                    <li><i class="bi bi-geo-alt"></i> Aurangabad</li>
-                                    <li><i class="bi bi-geo-alt"></i> Chalisgaon</li>
-                                    <li><i class="bi bi-geo-alt"></i> Chikhli</li>
-                                    <li><i class="bi bi-geo-alt"></i> Dhule</li>
+                                    @foreach ($chunk as $location)
+                                    <li><i class="bi bi-geo-alt"></i> {{ $location->name }}</li>
+                                    @endforeach
                                 </ul>
                             </div>
                         </div>
-                        <div class="col-md-6 col-6">
-                            <div class="state-branch state-branch-1">
-                                <ul>
-                                    <li><i class="bi bi-geo-alt"></i> Jalgaon</li>
-                                    <li><i class="bi bi-geo-alt"></i> Khargone</li>
-                                    <li><i class="bi bi-geo-alt"></i> Malegaon</li>
-                                    <li><i class="bi bi-geo-alt"></i> Nashik</li>
-                                    <li><i class="bi bi-geo-alt"></i> Sendwaha</li>
-                                </ul>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
             </div>
-            <div class="col-xl-6">
-                <div class="state-branch-box">
-                    <h4 class="violet">Gujarat</h4>
-                    <div class="row">
-                        <div class="col-md-6 col-6">
-                            <div class="state-branch">
-                                <ul>
-                                    <li><i class="bi bi-geo-alt"></i> Ahmadabad</li>
-                                    <li><i class="bi bi-geo-alt"></i> Bhuj</li>
-                                    <li><i class="bi bi-geo-alt"></i> Bhavnagar</li>
-                                    <li><i class="bi bi-geo-alt"></i> Jamanagar</li>
-                                    <li><i class="bi bi-geo-alt"></i> Mehsana</li>
-                                    <li><i class="bi bi-geo-alt"></i> Palanpur</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-6">
-                            <div class="state-branch state-branch-1">
-                                <ul>
-                                    <li><i class="bi bi-geo-alt"></i> Rajkot</li>
-                                    <li><i class="bi bi-geo-alt"></i> Veraval</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            @endforeach
+
+
+
+
+
         </div>
     </div>
 </section>
@@ -399,29 +368,19 @@
                 <div class="boxService">
                     <div class="imp-info-list">
                         <ul>
+
+                            @foreach($importants_data as $important)
+                            @php
+                            // Decode the JSON data in the 'info' field
+                            $info = json_decode($important->info);
+                            @endphp
                             <li>
-                                <a href="javascript:void(0)"><i class="bi bi-chevron-double-right"></i> Grievance Redressal Officer | Averi Misra | Email id:
-                                    cs@ariscapital.in</a>
+                                <a href="{{ asset('images/important_pdfs/' . $info->pdf) }}" download>
+                                    <i class="bi bi-chevron-double-right"></i> {{ $info->title }}
+                                </a>
                             </li>
-                            <li>
-                                <a href="{{ asset('frontend/assets/pdf/privacy-policy.pdf')}}" download><i class="bi bi-chevron-double-right"></i> Privacy Policy | January 2024</a>
-                            </li>
-                            <li>
-                                <a href="{{ asset('frontend/assets/pdf/Terms-Conditions.pdf')}}" download><i class="bi bi-chevron-double-right"></i> Terms & Conditions | January
-                                    2024</a>
-                            </li>
-                            <li>
-                                <a href="{{ asset('frontend/assets/pdf/Refund-Policy.pdf')}}" download><i class="bi bi-chevron-double-right"></i> Aris Refund Policy | January
-                                    2023</a>
-                            </li>
-                            <li>
-                                <a href="{{ asset('frontend/assets/pdf/Fair-Practice.pdf')}}" download><i class="bi bi-chevron-double-right"></i> Fair Practice Code Policy |
-                                    January 2019</a>
-                            </li>
-                            <li>
-                                <a href="{{ asset('frontend/assets/pdf/Customer-Grievance.pdf')}}" download><i class="bi bi-chevron-double-right"></i> Customer Grievance Redressal
-                                    Policy | January 2019</a>
-                            </li>
+                            @endforeach
+
                         </ul>
                     </div>
                 </div>
@@ -479,10 +438,17 @@
             <div class="col-xl-12">
                 <div class="news-media">
                     <div class="owl-carousel owl-theme">
-                        <div class="item"><img src="{{ asset('frontend/assets/images/news/1.jpg')}}"></div>
-                        <div class="item"><img src="{{ asset('frontend/assets/images/news/2.jpg')}}"></div>
-                        <div class="item"><img src="{{ asset('frontend/assets/images/news/3.jpg')}}"></div>
+                        @foreach($media_data as $media)
+                        @php
+                        // Decode the JSON data in the 'info' field
+                        $info = json_decode($media->info);
+                        @endphp
+                        <div class="item">
+                            <img src="{{ asset('images/media/' . $info->image) }}" alt="Media Image">
+                        </div>
+                        @endforeach
                     </div>
+
                 </div>
             </div>
         </div>
@@ -552,5 +518,81 @@
         </div>
     </div>
 </section>
+
+@endsection
+
+@section('js')
+<script>
+    function initMap() {
+        // Center the map on India
+        const indiaCenter = {
+            lat: 24.0582407,
+            lng: 77.847189
+        };
+
+        // Create the map instance
+        const map = new google.maps.Map(document.getElementById("map"), {
+            center: indiaCenter,
+            zoom: 5,
+        });
+
+        // Get data from backend (injected as a JavaScript variable)
+        const locations = @json($locations);
+
+        // console.log($locations);
+
+
+        // Loop through locations and process each one
+        locations.forEach(location => {
+            if (location.info) {
+                const locationInfo = JSON.parse(location.info);
+
+                // Check if latitude and longitude are already available
+                if (locationInfo.latitude && locationInfo.longitude) {
+                    addMarker(locationInfo.latitude, locationInfo.longitude, locationInfo.name, locationInfo.address);
+                } else {
+                    // Fetch latitude and longitude using Google Geocoding API
+                    fetch(`https://maps.googleapis.com/maps/api/geocode/json?address=${encodeURIComponent(locationInfo.address)}&key=AIzaSyCPk5oNPOBry4jdtZ56O5v5CDMdhUg6Zs4`)
+                        .then(response => response.json())
+                        .then(data => {
+                            if (data.status === "OK" && data.results[0]) {
+                                const coords = data.results[0].geometry.location;
+
+                                // Add marker
+                                addMarker(coords.lat, coords.lng, locationInfo.name, locationInfo.address);
+                            } else {
+                                console.error("Geocoding failed for address:", locationInfo.address);
+                            }
+                        })
+                        .catch(error => console.error("Error with Geocoding API:", error));
+                }
+            }
+        });
+
+        // Function to add a marker to the map
+        function addMarker(lat, lng, name, address) {
+            const marker = new google.maps.Marker({
+                position: {
+                    lat: lat,
+                    lng: lng
+                },
+                map: map,
+                title: name,
+            });
+
+            const infoWindow = new google.maps.InfoWindow({
+                content: `<h4>${name}</h4><p>${address}</p>`,
+            });
+
+            marker.addListener("click", () => {
+                infoWindow.open(map, marker);
+            });
+        }
+    }
+
+    // Initialize the map
+    window.onload = initMap;
+</script>
+
 
 @endsection

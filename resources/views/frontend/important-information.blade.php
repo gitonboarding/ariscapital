@@ -33,60 +33,17 @@
                 <div class="boxService">
                     <div class="imp-info-list important-list">
                         <ul>
+                            @foreach($importants_data as $important)
+                            @php
+                            // Decode the JSON data in the 'info' field
+                            $info = json_decode($important->info);
+                            @endphp
                             <li>
-                                <a href="javascript:void(0)"><i class="bi bi-chevron-double-right"></i> Grievance Redressal Officer | Averi Misra | Email id: cs@ariscapital.in</a>
+                                <a href="{{ asset('images/important_pdfs/' . $info->pdf) }}" download>
+                                    <i class="bi bi-chevron-double-right"></i> {{ $info->title }}
+                                </a>
                             </li>
-                            <li>
-                                <a href="./assets/pdf/privacy-policy.pdf" download><i class="bi bi-chevron-double-right"></i> Privacy Policy | January 2024</a>
-                            </li>
-                            <li>
-                                <a href="./assets/pdf/Terms-Conditions.pdf" download><i class="bi bi-chevron-double-right"></i> Terms & Conditions | January 2024</a>
-                            </li>
-                            <li>
-                                <a href="./assets/pdf/Refund-Policy.pdf" download><i class="bi bi-chevron-double-right"></i> Aris Refund Policy | January 2023</a>
-                            </li>
-                            <li>
-                                <a href="./assets/pdf/Fair-Practice.pdf" download><i class="bi bi-chevron-double-right"></i> Fair Practice Code Policy | January 2019</a>
-                            </li>
-                            <li>
-                                <a href="./assets/pdf/Customer-Grievance.pdf" download><i class="bi bi-chevron-double-right"></i> Customer Grievance Redressal Policy | January 2019</a>
-                            </li>
-                            <li>
-                                <a href="javascript:void(0)"><i class="bi bi-chevron-double-right"></i> Grievance Redressal Officer | Averi Misra | Email id: cs@ariscapital.in</a>
-                            </li>
-                            <li>
-                                <a href="./assets/pdf/privacy-policy.pdf" download><i class="bi bi-chevron-double-right"></i> Privacy Policy | January 2024</a>
-                            </li>
-                            <li>
-                                <a href="./assets/pdf/Terms-Conditions.pdf" download><i class="bi bi-chevron-double-right"></i> Terms & Conditions | January 2024</a>
-                            </li>
-                            <li>
-                                <a href="./assets/pdf/Refund-Policy.pdf" download><i class="bi bi-chevron-double-right"></i> Aris Refund Policy | January 2023</a>
-                            </li>
-                            <li>
-                                <a href="./assets/pdf/Fair-Practice.pdf" download><i class="bi bi-chevron-double-right"></i> Fair Practice Code Policy | January 2019</a>
-                            </li>
-                            <li>
-                                <a href="./assets/pdf/Customer-Grievance.pdf" download><i class="bi bi-chevron-double-right"></i> Customer Grievance Redressal Policy | January 2019</a>
-                            </li>
-                            <li>
-                                <a href="javascript:void(0)"><i class="bi bi-chevron-double-right"></i> Grievance Redressal Officer | Averi Misra | Email id: cs@ariscapital.in</a>
-                            </li>
-                            <li>
-                                <a href="./assets/pdf/privacy-policy.pdf" download><i class="bi bi-chevron-double-right"></i> Privacy Policy | January 2024</a>
-                            </li>
-                            <li>
-                                <a href="./assets/pdf/Terms-Conditions.pdf" download><i class="bi bi-chevron-double-right"></i> Terms & Conditions | January 2024</a>
-                            </li>
-                            <li>
-                                <a href="./assets/pdf/Refund-Policy.pdf" download><i class="bi bi-chevron-double-right"></i> Aris Refund Policy | January 2023</a>
-                            </li>
-                            <li>
-                                <a href="./assets/pdf/Fair-Practice.pdf" download><i class="bi bi-chevron-double-right"></i> Fair Practice Code Policy | January 2019</a>
-                            </li>
-                            <li>
-                                <a href="./assets/pdf/Customer-Grievance.pdf" download><i class="bi bi-chevron-double-right"></i> Customer Grievance Redressal Policy | January 2019</a>
-                            </li>
+                            @endforeach
                         </ul>
                     </div>
                 </div>

@@ -33,16 +33,15 @@
 </head>
 
 <style>
-.sidebar-nav .nav-item.active a {
-    color: black;
-}
+    .sidebar-nav .nav-item.active a {
+        color: black;
+    }
 
-.sidebar-nav .nav-item.active i {
-    font-size: 16px;
-    margin-right: 10px;
-    color: #000;
-}
-
+    .sidebar-nav .nav-item.active i {
+        font-size: 16px;
+        margin-right: 10px;
+        color: #000;
+    }
 </style>
 
 
@@ -52,7 +51,7 @@
     <header id="header" class="header fixed-top d-flex align-items-center">
 
         <div class="d-flex align-items-center justify-content-between">
-            <a href="index.html" class="logo d-flex align-items-center">
+            <a href="{{url('/')}}" class="logo d-flex align-items-center">
                 <span class="d-none d-lg-block"><img src="{{asset('backend/assets/img/aris-logo.png')}}" /></span>
             </a>
             <i class="bi bi-list toggle-sidebar-btn"></i>
@@ -105,38 +104,62 @@
     </header><!-- End Header -->
 
     <!-- ======= Sidebar ======= -->
-    <aside id="sidebar" class="sidebar">
 
+    <aside id="sidebar" class="sidebar">
         <ul class="sidebar-nav" id="sidebar-nav">
 
+            {{--
+            <!-- Dashboard Link -->
             <li class="nav-item {{ request()->is('dashboard') ? 'active' : '' }}">
-                <a class="nav-link" href="{{url('/dashboard')}}">
-                    <i class="bi bi-grid"></i>
-                    <span>Dashboard</span>
-                </a>
+            <a class="nav-link" href="{{ url('/dashboard') }}">
+                <i class="bi bi-grid"></i>
+                <span>Dashboard</span>
+            </a>
             </li>
+            --}}
+
+            <!-- Teams Link -->
             <li class="nav-item {{ request()->is('team*') ? 'active' : '' }}">
                 <a class="nav-link" href="{{ route('team.index') }}">
                     <i class="bi bi-diagram-3"></i>
                     <span>Teams</span>
                 </a>
             </li>
+
+            <!-- Board Link -->
             <li class="nav-item {{ request()->is('board*') ? 'active' : '' }}">
                 <a class="nav-link" href="{{ route('board.index') }}">
                     <i class="bi bi-people"></i>
                     <span>Board</span>
                 </a>
             </li>
-            <li class="nav-item {{ request()->is('blog*') ? 'active' : '' }}">
-                <a class="nav-link" href="{{ route('blog.index') }}">
-                    <i class="bi bi-file-earmark-richtext"></i>
-                    <span>Blogs</span>
+
+            <!-- Location Link -->
+            <li class="nav-item {{ request()->is('location*') ? 'active' : '' }}">
+                <a class="nav-link" href="{{ route('location.index') }}">
+                    <i class="bi bi-map"></i> <!-- Using map icon for location -->
+                    <span>Location</span>
+                </a>
+            </li>
+
+            <!-- Media Link -->
+            <li class="nav-item {{ request()->is('media*') ? 'active' : '' }}">
+                <a class="nav-link" href="{{ route('media.index') }}">
+                    <i class="bi bi-camera-video"></i> <!-- Using camera icon for media -->
+                    <span>Media</span>
+                </a>
+            </li>
+
+            <li class="nav-item {{ request()->is('important-information.*') ? 'active' : '' }}">
+                <a class="nav-link" href="{{ route('important-information.index') }}">
+                    <i class="bi bi-camera-video"></i> <!-- Using camera icon for media -->
+                    <span>important-information</span>
                 </a>
             </li>
 
         </ul>
+    </aside><!-- End Sidebar -->
 
-    </aside><!-- End Sidebar-->
 
     <main id="main" class="main">
         <div class="pagetitle">

@@ -14,7 +14,7 @@ Board
                     <h5 class="card-title">Board Of Director Information</h5>
 
                     <!-- Form for Team Information -->
-                    <form class="row g-3" action="{{url('board/save')}}" method="post" enctype="multipart/form-data">
+                    <form class="row g-3" action="{{route('board.save')}}" method="post" enctype="multipart/form-data">
                         @csrf
                         <!-- Name -->
                         <div class="col-12">

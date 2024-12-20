@@ -52,6 +52,10 @@ class TeamController extends Controller
     {
         // dd($id);
         $data = Team::find($id);
+        if (!$data) {
+            # code...
+            return redirect()->route('team.index')->with('error', 'Team member not found!');
+        }
         // dd($data);
         return view('backend.team.edit', compact('data'));
     }

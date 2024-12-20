@@ -29,102 +29,46 @@
             </div>
             <div class="col-lg-12">
                 <div class="row">
+
+                    @foreach ($data as $member)
                     <div class="col-lg-3 col-md-3 col-sm-6 col-12">
                         <div class="team_02">
-                            <div class="other-staff" data-toggle="modal" data-target="#myModal1">
+                            <div class="other-staff" data-toggle="modal" data-target="#modal{{ $member->id }}">
                                 <div class="tm_thumb">
-                                    <img src="assets/images/team/sanhita_das.jpg" alt="">
+                                    <img src="{{ asset($member->image) }}" alt="{{ $member->name }}">
                                 </div>
                                 <div class="tm_desc">
-                                    <h3>Sanhita Das</h3>
-                                    <h5>Finance & Accounts</h5>
+                                    <h3>{{ $member->name }}</h3>
+                                    <h5>{{ $member->position }}</h5>
                                 </div>
                             </div>
                         </div>
                         <!-- Modal -->
-                        <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                        <div class="modal fade" id="modal{{ $member->id }}" tabindex="-1" role="dialog" aria-labelledby="modalTitle{{ $member->id }}" aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered" role="document">
                                 <div class="modal-content">
                                     <div class="modal-header">
                                         <div class="team-name">
-                                            <h3>Sanhita Das</h3>
-                                            <h5>Finance & Accounts</h5>
+                                            <h3>{{ $member->name }}</h3>
+                                            <h5>{{ $member->position }}</h5>
                                         </div>
                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                             <span aria-hidden="true">&times;</span>
                                         </button>
                                     </div>
                                     <div class="modal-body">
-                                        <p>Sanhita Das leads the finance and accounts for Aris Capital.</p>
+                                        <p>{{ $member->description }}</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-3 col-sm-6 col-12">
-                        <div class="team_02">
-                            <div class="other-staff" data-toggle="modal" data-target="#myModal2">
-                                <div class="tm_thumb">
-                                    <img src="assets/images/team/sidhhartha.jpg" alt="">
-                                </div>
-                                <div class="tm_desc">
-                                    <h3>Siddhartha Guhathakurta</h3>
-                                    <h5>Human Resource</h5>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Modal -->
-                        <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-centered" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <div class="team-name">
-                                            <h3>Siddhartha Guhathakurta</h3>
-                                            <h5>Human Resource</h5>
-                                        </div>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <p>Mr. Siddhartha Guhathakurta heads the Human Resource and Admin functions for our HO and all branch locations.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-3 col-sm-6 col-12">
-                        <div class="team_02">
-                            <div class="other-staff" data-toggle="modal" data-target="#myModal3">
-                                <div class="tm_thumb">
-                                    <img src="./assets/images/team/yogesh_shinde.jpg" alt="">
-                                </div>
-                                <div class="tm_desc">
-                                    <h3>Yogesh Shinde</h3>
-                                    <h5>Sr. Credit Manager (West)</h5>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Modal -->
-                        <div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-centered" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <div class="team-name">
-                                            <h3>Yogesh Shinde</h3>
-                                            <h5>Sr. Credit Manager (West)</h5>
-                                        </div>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <p>Yogesh Baburao Shinde leads the Credit department of Aris Capital(West).</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
+
+
+
+
+
                 </div>
             </div>
         </div>

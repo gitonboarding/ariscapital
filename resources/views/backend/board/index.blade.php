@@ -53,7 +53,7 @@ Board
                                         <td>
                                             <a href="{{route('board.edit', $row->id)}}"><i class="bi bi-pencil-square"></i></a>&nbsp;
                                             <a onclick="return confirm('Are you sure?')" href="{{route('board.delete', $row->id)}}"><i class="bi bi-trash-fill" style="color: #f00;"></i></a>&nbsp;
-                                            <a href="{{route('board.duplicate', $row->id)}}"><i class="bi bi-files"></i></a>
+                                            
                                         </td>
                                     </tr>
                                     @endforeach

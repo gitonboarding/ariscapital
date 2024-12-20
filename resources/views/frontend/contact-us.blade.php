@@ -26,25 +26,34 @@
             </div>
         </div>
         <div class="row">
+
+
             <div class="col-lg-6">
-                <form class="contact-form-1 rainbow-dynamic-form" id="contact-form" method="POST" action="mail.php">
+                @if(session('success'))
+                <div class="alert alert-success">
+                    {{ session('success') }}
+                </div>
+                <br />
+                @endif
+                <form class="contact-form-1 rainbow-dynamic-form" id="contact-form" method="POST" action="{{ route('contact.submit') }}">
+                    @csrf
                     <div class="contact-form">
                         <div class="form-group">
-                            <input type="text" name="contact-name" id="contact-name" placeholder="Your Name">
+                            <input type="text" name="contact-name" id="contact-name" placeholder="Your Name" value="{{ old('contact-name') }}">
                         </div>
                         <div class="form-group">
-                            <input type="text" name="contact-phone" id="contact-phone" placeholder="Phone Number">
+                            <input type="text" name="contact-phone" id="contact-phone" placeholder="Phone Number" value="{{ old('contact-phone') }}">
                         </div>
                         <div class="form-group">
-                            <input type="email" id="contact-email" name="contact-email" placeholder="Your Email">
-                        </div>
-
-                        <div class="form-group">
-                            <input type="text" id="subject" name="subject" placeholder="Your Subject">
+                            <input type="email" id="contact-email" name="contact-email" placeholder="Your Email" value="{{ old('contact-email') }}">
                         </div>
 
                         <div class="form-group">
-                            <textarea name="contact-message" id="contact-message" placeholder="Your Message"></textarea>
+                            <input type="text" id="subject" name="subject" placeholder="Your Subject" value="{{ old('subject') }}">
+                        </div>
+
+                        <div class="form-group">
+                            <textarea name="contact-message" id="contact-message" placeholder="Your Message">{{ old('contact-message') }}</textarea>
                         </div>
 
                         <div class="form-group">
@@ -52,6 +61,7 @@
                         </div>
                     </div>
                 </form>
+
             </div>
             <div class="col-md-6">
                 <div class="business-map">
