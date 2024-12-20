@@ -33,7 +33,7 @@ Media List
                                     @foreach($data as $key => $media)
                                     <tr>
                                         <th scope="row">{{ $key + 1 }}</th>
-                                        <td>{{ $media->title ?? 'Untitled' }}</td>
+                                        <td>{{ json_decode($media->info)->image ?? 'Untitled' }}</td>
                                         <td>
                                             @if (json_decode($media->info)->image)
                                             <img src="{{ asset('images/media/' . json_decode($media->info)->image) }}" width="100" alt="Media Image">
