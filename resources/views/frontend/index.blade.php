@@ -1,5 +1,6 @@
 @extends('frontend.layouts.layout')
 @section('contents')
+
 <style>
     .main-section {
         background-image: url("{{ asset('frontend/assets/images/background.png') }}");
@@ -148,6 +149,7 @@
         padding: 25px;
     }
 </style>
+
 <section class="main-section section-desktop" id="home">
     <div class="container-fluid">
         <div class="row">
@@ -684,22 +686,28 @@
             zoom: 5,
         });
 
-        // Get data from backend (injected as a JavaScript variable)
-        const locations = @json($locations);
+        // Get data from the backend (grouped by state)
+        const groupedLocations = @json($groupedLocations);
 
-        // console.log($locations);
+        // Iterate through each state and its locations
+        Object.keys(groupedLocations).forEach(stateName => {
+            const stateLocations = groupedLocations[stateName];
 
-
-        // Loop through locations and process each one
-        locations.forEach(location => {
-            if (location.info) {
+            stateLocations.forEach(location => {
+                // Parse the JSON info field for the location
                 const locationInfo = JSON.parse(location.info);
 
-                // Check if latitude and longitude are already available
+                // Check if latitude and longitude are provided
                 if (locationInfo.latitude && locationInfo.longitude) {
-                    addMarker(locationInfo.latitude, locationInfo.longitude, locationInfo.name, locationInfo.address);
+                    // Add marker if coordinates are already available
+                    addMarker(
+                        parseFloat(locationInfo.latitude),
+                        parseFloat(locationInfo.longitude),
+                        locationInfo.name,
+                        locationInfo.address
+                    );
                 } else {
-                    // Fetch latitude and longitude using Google Geocoding API
+                    // Fetch latitude and longitude using the Geocoding API
                     fetch(`https://maps.googleapis.com/maps/api/geocode/json?address=${encodeURIComponent(locationInfo.address)}&key=AIzaSyCPk5oNPOBry4jdtZ56O5v5CDMdhUg6Zs4`)
                         .then(response => response.json())
                         .then(data => {
@@ -707,14 +715,19 @@
                                 const coords = data.results[0].geometry.location;
 
                                 // Add marker
-                                addMarker(coords.lat, coords.lng, locationInfo.name, locationInfo.address);
+                                addMarker(
+                                    coords.lat,
+                                    coords.lng,
+                                    locationInfo.name,
+                                    locationInfo.address
+                                );
                             } else {
                                 console.error("Geocoding failed for address:", locationInfo.address);
                             }
                         })
                         .catch(error => console.error("Error with Geocoding API:", error));
                 }
-            }
+            });
         });
 
         // Function to add a marker to the map
@@ -741,6 +754,7 @@
     // Initialize the map
     window.onload = initMap;
 </script>
+
 
 
 @endsection
