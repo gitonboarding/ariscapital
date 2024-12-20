@@ -28,7 +28,10 @@ Media Create
                                 accept="image/*"
                                 required
                             >
+
                         </div>
+                        <p style="color:red; font-size: 14px">Recommended Size - 1200px x 650px</p>
+
 
                         <!-- Submit Buttons -->
                         <div class="text-center">

@@ -20,7 +20,17 @@ Edit Location
                     <form class="row g-3" action="{{ route('location.update', $location->id) }}" method="post">
                         @csrf
                         
-                        
+                        <div class="col-12">
+                            <label for="state_name" class="form-label">state  Name</label>
+                            <input 
+                                type="text" 
+                                class="form-control" 
+                                name="state_name" 
+                                value="{{ old('state_name') }}" 
+                                placeholder="Enter state Name" 
+                                required
+                            >
+                        </div>
                         <!-- District Name -->
                         <div class="col-12">
                             <label for="district_name" class="form-label">District Name</label>

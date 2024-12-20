@@ -38,6 +38,8 @@ Board
                             <label for="boardImage" class="form-label">Upload Image</label>
                             <input type="file" id="image" name="image" class="form-control">
                             <img src="#" id="image_preview" class="d-none img-fluid rounded mt-2 mb-2" width="100" height="100">
+                            <p style="color:red; font-size: 14px">Recommended Size - 200px x 285px</p>
+
                         </div>
 
                         <div class="text-center">

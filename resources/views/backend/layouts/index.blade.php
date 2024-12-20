@@ -52,7 +52,7 @@
 
         <div class="d-flex align-items-center justify-content-between">
             <a href="{{url('/')}}" class="logo d-flex align-items-center">
-                <span class="d-none d-lg-block"><img src="{{asset('backend/assets/img/aris-logo.png')}}" /></span>
+                <span class="d-none d-lg-block"><img src="{{asset('/frontend/assets/images/logo.png')}}" /></span>
             </a>
             <i class="bi bi-list toggle-sidebar-btn"></i>
         </div><!-- End Logo -->

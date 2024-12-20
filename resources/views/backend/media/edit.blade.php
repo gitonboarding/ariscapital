@@ -40,6 +40,7 @@ Media Edit
                                 name="image" 
                                 accept="image/*"
                             >
+                            <p style="color:red; font-size: 14px">Recommended Size - 1200px x 650px</p>
                         </div>
 
                         <!-- Submit Buttons -->

@@ -57,6 +57,7 @@ class InfoController extends Controller
     {
         // Validate the request data
         $request->validate([
+            'state_name' => 'required',
             'district_name' => 'required|string|max:255',
             'address' => 'required|string|max:255',
         ]);
@@ -64,8 +65,9 @@ class InfoController extends Controller
         // Find the location by ID
         $location = Info::findOrFail($id);
         $info = [
-            'name' => $request->district_name,
-            'address' => $request->address,
+            'state_name' => ucwords($request->state_name),
+            'name' => ucwords($request->district_name),
+            'address' => ucwords($request->address),
         ];
 
         // Update the info field
