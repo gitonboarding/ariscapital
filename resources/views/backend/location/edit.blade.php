@@ -26,7 +26,7 @@ Edit Location
                                 type="text" 
                                 class="form-control" 
                                 name="state_name" 
-                                value="{{ old('state_name') }}" 
+                                value="{{ old('state_name', $location->info['state_name'] ?? '') }}" 
                                 placeholder="Enter state Name" 
                                 required
                             >
